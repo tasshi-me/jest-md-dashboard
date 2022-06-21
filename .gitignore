@@ -3,8 +3,6 @@
 # dependencies
 node_modules/
 .node_modules/
-yarn.lock
-package-lock.json
 
 npm-debug.log*
 yarn-debug.log*
@@ -13,9 +11,16 @@ yarn-error.log*
 # testing
 coverage/
 
+# artifacts
+lib/
+
 # misc
 **/.DS_Store
 **/.vs
 **/.vscode
 !**/.vscode/tasks.json
 .idea
+
+# secrets
+.env
+.envrc

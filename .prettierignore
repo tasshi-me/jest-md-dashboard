@@ -1,0 +1,6 @@
+# Ignore artifacts:
+lib
+coverage
+
+# Ignore all HTML files:
+*.html

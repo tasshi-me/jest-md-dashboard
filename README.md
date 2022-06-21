@@ -1,8 +1,6 @@
-# ts-node-template
+# jest-md-dashboard
 
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
-
-> Template project for ts-node
+> Generating a pretty Markdown dashboard for Jest
 
 ## Table of Contents
 
@@ -14,12 +12,14 @@
 ## Install
 
 ```bash
+# TODO
 $ yarn
 ```
 
 ## Usage
 
 ```bash
+# TODO
 $ yarn start
 ```
 

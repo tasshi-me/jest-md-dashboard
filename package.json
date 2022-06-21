@@ -1,31 +1,45 @@
 {
-  "name": "ts-node-template",
-  "version": "1.0.0",
-  "main": "src/index.ts",
-  "repository": "https://mshrtsr@github.com/mshrtsr/ts-node-template.git",
+  "name": "jest-md-dashboard",
+  "version": "0.0.1",
+  "description": "Generating a pretty Markdown dashboard for Jest",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mshrtsr/jest-md-dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mshrtsr/jest-md-dashboard/issues"
+  },
+  "homepage": "https://github.com/mshrtsr/jest-md-dashboard#readme",
   "author": "Masaharu TASHIRO <masatsr.kit@gmail.com>",
   "license": "MIT",
-  "private": "true",
+  "keywords": [
+    "jest",
+    "reporter",
+    "markdown"
+  ],
+  "type": "module",
+  "main": "src/index.ts",
   "scripts": {
-    "start": "TS_NODE_FILES=true ts-node src/index.ts",
-    "dev": "TS_NODE_FILES=true ts-node-dev src/index.ts",
-    "lint": "run-p lint:eslint lint:prettier",
-    "lint:eslint": "eslint 'src/**/*.ts'",
-    "lint:prettier": "prettier 'src/**/*.ts' --check",
-    "fix": "run-s fix:eslint fix:prettier",
-    "fix:eslint": "yarn lint:eslint --fix",
-    "fix:prettier": "yarn lint:prettier --write"
+    "prebuild": "npm run clean",
+    "build": "tsc --build tsconfig.json --force",
+    "test": "jest",
+    "lint": "eslint 'src/**/*.ts'",
+    "fix": "yarn lint:eslint --fix",
+    "clean": "rimraf lib"
   },
-  "dependencies": {
-    "ts-node": "^10.0.0",
-    "typescript": "^4.6.3"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-typescript": "^7.17.12",
     "@cybozu/eslint-config": "^17.0.1",
     "@tsconfig/recommended": "^1.0.1",
-    "eslint": "^8.12.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.4",
-    "ts-node-dev": "^1.0.0-pre.41"
+    "@types/jest": "^28.1.2",
+    "babel-jest": "^28.1.1",
+    "eslint": "^8.18.0",
+    "jest": "^28.1.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
   }
 }
