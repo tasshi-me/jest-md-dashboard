@@ -18,13 +18,32 @@
     "markdown"
   ],
   "type": "module",
-  "main": "src/index.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/types/index.d.ts",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "types": "./lib/types/index.d.cts",
+        "default": "./lib/cjs/index.cjs"
+      }
+    }
+  },
+  "types": "./lib/types/index.d.ts",
+  "main": "./lib/cjs/index.cjs",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
-    "prebuild": "npm run clean",
-    "build": "tsc --build tsconfig.json --force",
+    "prebuild": "run-s clean",
+    "build": "run-s build:esm build:cjs build:types",
+    "build:esm": "esbuild --outdir=./lib/esm --platform=node --format=esm src/*.ts",
+    "build:cjs": "esbuild --out-extension:.js=.cjs --outdir=./lib/cjs --platform=node --format=cjs src/*.ts",
+    "build:types": "tsc --build tsconfig.json --force",
     "test": "jest",
-    "lint": "eslint 'src/**/*.ts'",
-    "fix": "yarn lint:eslint --fix",
+    "lint": "eslint --ext .js,.mjs,.cjs,.ts,.mts,.cts ./",
+    "fix": "yarn lint --fix",
     "clean": "rimraf lib"
   },
   "dependencies": {},
@@ -33,11 +52,17 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-typescript": "^7.17.12",
     "@cybozu/eslint-config": "^17.0.1",
+    "@jest/reporters": "^28.1.1",
+    "@jest/test-result": "^28.1.1",
+    "@jest/types": "^28.1.1",
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^28.1.2",
     "babel-jest": "^28.1.1",
+    "esbuild": "^0.14.47",
     "eslint": "^8.18.0",
     "jest": "^28.1.1",
+    "jest-cli": "^28.1.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.7.4"
