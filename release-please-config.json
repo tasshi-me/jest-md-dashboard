@@ -4,7 +4,7 @@
       "releaseType": "node",
       "draft": false,
       "prerelease": false,
-      "bumpMinorPreMajor": false,
+      "bumpMinorPreMajor": true,
       "bumpPatchForMinorPreMajor": false,
       "changelogPath": "CHANGELOG.md",
       "versioning": "default"
