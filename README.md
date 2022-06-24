@@ -4,29 +4,63 @@
 
 ## Table of Contents
 
-- [Install](#install)
-- [Usage](#usage)
-- [Contribute](#contribute)
-- [License](#license)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Contribution](#Contribution)
+- [License](#License)
 
-## Install
+## Installation
 
-```bash
-# TODO
-$ yarn
+### npm
+
+```shell
+npm install -D jest-md-dashboard
+```
+
+### yarn
+
+```shell
+yarn add -D jest-md-dashboard
 ```
 
 ## Usage
 
-```bash
-# TODO
-$ yarn start
+Add `reporters` field in `jest.config.js`.
+
+```js
+const config = {
+    reporters: ["jest-md-dashboard"],
+};
+module.exports = config;
 ```
 
-## Contribute
+Run jest and the markdown output is printed to stdout.
 
-PRs accepted.
+### Separate config
+
+If you want to separate jest config, e.g. print dashboard only on CI,
+create `jest.print-dashboard.js`.
+
+```js
+// Inherit jest.config.js
+const baseConfig = require("./jest.config.js");
+
+const config = {
+    ...baseConfig,
+    reporters: ["jest-md-dashboard"],
+};
+module.exports = config;
+```
+
+And then, run jest with `--config` option.
+```shell
+jest --config=./jest.print-dashboard.js
+```
+
+## Contribution
+
+We appreciate your help!
 
 ## License
 
-MIT © mshrtsr
+- [MIT](LICENSE)
