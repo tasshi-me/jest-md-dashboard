@@ -81,9 +81,10 @@ jest --config=./jest.print-dashboard.js
 
 ## Options
 
-| Name    | Type     | Default           | Description                                                                        |
-| ------- | -------- | ----------------- | ---------------------------------------------------------------------------------- |
-| `title` | `string` | `Tests Dashboard` | The title of a dashboard.<br>It will be printed at the top of the markdown output. |
+| Name         | Type     | Default           | Description                                                                                                         |
+| ------------ | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `title`      | `string` | `Tests Dashboard` | The title of a dashboard.<br>It will be printed at the top of the markdown output.                                  |
+| `outputPath` | `string` | `undefined`       | The file path to output dashboard. If this option is specified, dashboard is printed to the file instead of stdout. |
 
 ## Contribution
 

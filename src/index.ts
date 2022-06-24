@@ -1,3 +1,4 @@
+import * as fs from "fs/promises";
 import path from "path";
 
 import type {
@@ -15,22 +16,25 @@ import type {
 import type { Config } from "@jest/types";
 
 export type ReporterOptions = {
-  title: string;
+  title?: string;
+  outputPath?: string;
 };
 
 export class MarkdownDashboardReporter implements Reporter {
-  private _globalConfig: Config.GlobalConfig;
-  private readonly _title: string;
-  private _context: ReporterContext;
+  private globalConfig: Config.GlobalConfig;
+  private readonly title: string;
+  private readonly outputPath?: string;
+  private context: ReporterContext;
 
   constructor(
     globalConfig: Config.GlobalConfig,
     reporterOptions: ReporterOptions,
     reporterContext: ReporterContext
   ) {
-    this._globalConfig = globalConfig;
-    this._title = reporterOptions.title ?? "Tests Dashboard";
-    this._context = reporterContext;
+    this.globalConfig = globalConfig;
+    this.title = reporterOptions.title ?? "Tests Dashboard";
+    this.outputPath = reporterOptions.outputPath;
+    this.context = reporterContext;
   }
 
   onRunStart(results: AggregatedResult, options: ReporterOnStartOptions): void {
@@ -40,11 +44,11 @@ export class MarkdownDashboardReporter implements Reporter {
     // noop
   }
 
-  onRunComplete(
+  async onRunComplete(
     testContexts: Set<TestContext>,
     results: AggregatedResult
-  ): void {
-    let resultText = `# ${this._title}\n\n`;
+  ): Promise<void> {
+    let resultText = `# ${this.title}\n\n`;
     for (const testResultsByFile of results.testResults) {
       resultText += `## ${path.relative("", testResultsByFile.testFilePath)}\n`;
       let lastAncestorTitles: string[] = [];
@@ -66,7 +70,12 @@ export class MarkdownDashboardReporter implements Reporter {
         }\n`;
       }
     }
-    console.log(resultText);
+    if (this.outputPath !== undefined && this.outputPath.length > 0) {
+      await fs.mkdir(path.dirname(this.outputPath), { recursive: true });
+      await fs.writeFile(this.outputPath, resultText);
+    } else {
+      console.log(resultText);
+    }
   }
 }
 

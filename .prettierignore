@@ -7,3 +7,6 @@ coverage
 
 # Ignore CHANGELOG.md (because it is auto generated)
 CHANGELOG.md
+
+# Ignore test cases
+__tests__

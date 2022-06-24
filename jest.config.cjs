@@ -5,5 +5,6 @@ const config = {
   coverageDirectory: "coverage",
   coverageProvider: "v8",
   roots: ["<rootDir>/src"],
+  testPathIgnorePatterns: ["<rootDir>/node_modules/", "fixtures"],
 };
 module.exports = config;
