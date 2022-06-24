@@ -10,6 +10,7 @@ Generating a pretty Markdown dashboard for Jest
 
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [Options](#Options)
 - [Contribution](#Contribution)
 - [License](#License)
 
@@ -33,12 +34,28 @@ Add `reporters` field in `jest.config.js`.
 
 ```js
 const config = {
-    reporters: ["jest-md-dashboard"],
+  reporters: ["jest-md-dashboard"],
 };
 module.exports = config;
 ```
 
 Run jest and the markdown output is printed to stdout.
+
+### With options
+
+```js
+const config = {
+  reporters: [
+    [
+      "jest-md-dashboard",
+      {
+        title: "My Dashboard",
+      },
+    ],
+  ],
+};
+module.exports = config;
+```
 
 ### Separate config
 
@@ -50,20 +67,23 @@ create `jest.print-dashboard.js`.
 const baseConfig = require("./jest.config.js");
 
 const config = {
-    ...baseConfig,
-    reporters: ["jest-md-dashboard"],
+  ...baseConfig,
+  reporters: ["jest-md-dashboard"],
 };
 module.exports = config;
 ```
 
 And then, run jest with `--config` option.
+
 ```shell
 jest --config=./jest.print-dashboard.js
 ```
 
 ## Options
 
-
+| Name    | Type     | Default           | Description                                                                        |
+| ------- | -------- | ----------------- | ---------------------------------------------------------------------------------- |
+| `title` | `string` | `Tests Dashboard` | The title of a dashboard.<br>It will be printed at the top of the markdown output. |
 
 ## Contribution
 
