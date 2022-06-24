@@ -12,7 +12,7 @@ import type {
   // eslint-disable-next-line node/no-unpublished-import
 } from "@jest/test-result";
 // eslint-disable-next-line node/no-unpublished-import
-import { Config } from "@jest/types";
+import type { Config } from "@jest/types";
 
 export type ReporterOptions = {
   title: string;
