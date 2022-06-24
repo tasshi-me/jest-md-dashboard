@@ -19,9 +19,9 @@ export type ReporterOptions = {
 };
 
 export class MarkdownDashboardReporter implements Reporter {
-  _globalConfig: Config.GlobalConfig;
-  _title: string;
-  _context: ReporterContext;
+  private _globalConfig: Config.GlobalConfig;
+  private readonly _title: string;
+  private _context: ReporterContext;
 
   constructor(
     globalConfig: Config.GlobalConfig,
