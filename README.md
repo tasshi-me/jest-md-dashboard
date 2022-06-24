@@ -1,6 +1,10 @@
 # jest-md-dashboard
 
-> Generating a pretty Markdown dashboard for Jest
+[![npm version](https://badge.fury.io/js/jest-md-dashboard.svg)](https://badge.fury.io/js/jest-md-dashboard)
+[![lint](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/lint.yml/badge.svg)](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/lint.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+Generating a pretty Markdown dashboard for Jest
 
 ## Table of Contents
 
@@ -56,6 +60,10 @@ And then, run jest with `--config` option.
 ```shell
 jest --config=./jest.print-dashboard.js
 ```
+
+## Options
+
+
 
 ## Contribution
 
