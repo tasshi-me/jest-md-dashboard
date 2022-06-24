@@ -1,0 +1,21 @@
+name: test
+on:
+  push:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: nodenv/actions/node-version@main
+        id: nodenv
+      - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ steps.nodenv.outputs.node-version }}"
+      - name: yarn install, build, and test
+        run: |
+          yarn install
+          yarn build
+          yarn --silent generate-dashboard >> $GITHUB_STEP_SUMMARY
