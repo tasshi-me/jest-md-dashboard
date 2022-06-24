@@ -1,12 +1,32 @@
+name: release-and-publish
 on:
   push:
     branches:
       - main
-name: release
+
 jobs:
   release:
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
+        id: release
         with:
           command: manifest
+
+  # https://github.com/google-github-actions/release-please-action#automating-publication-to-npm
+  publish:
+    runs-on: ubuntu-latest
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn install --frozen-lockfile
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
