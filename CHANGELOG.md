@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.1.0...jest-md-dashboard-v0.2.0) (2022-06-25)
+
+
+### Features
+
+* add `outputPath` option ([12325e7](https://github.com/mshrtsr/jest-md-dashboard/commit/12325e70868353a543c75d8ea48ee72b26d66935))
+
+
+### Bug Fixes
+
+* build package before publish ([e3ac569](https://github.com/mshrtsr/jest-md-dashboard/commit/e3ac56990eab6568b4dd2b2673d7c3e39cec06ff))
+
 ## 0.1.0 (2022-06-24)
 
 
