@@ -16,5 +16,5 @@ jobs:
           node-version: "${{ steps.nodenv.outputs.node-version }}"
       - name: yarn install, and yarn lint
         run: |
-          yarn install
+          yarn install --frozen-lockfile
           yarn lint

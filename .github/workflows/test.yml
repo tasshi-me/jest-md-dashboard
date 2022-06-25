@@ -16,6 +16,6 @@ jobs:
           node-version: "${{ steps.nodenv.outputs.node-version }}"
       - name: yarn install, build, and test
         run: |
-          yarn install
+          yarn install --frozen-lockfile
           yarn build
           yarn --silent generate-dashboard >> $GITHUB_STEP_SUMMARY
