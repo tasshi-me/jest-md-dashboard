@@ -11,6 +11,17 @@ const config = {
         },
       },
     ],
+    // Workaround for https://github.com/mysticatea/eslint-plugin-node/issues/248
+    "node/no-missing-import": "off",
+    "import/no-unresolved": "error",
+  },
+  settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".cts", ".mts"],
+    },
+    "import/resolver": {
+      typescript: {},
+    },
   },
 };
 module.exports = config;
