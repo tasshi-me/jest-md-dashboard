@@ -1,19 +1,14 @@
 import * as fs from "fs/promises";
 import path from "path";
 
-import type {
-  Reporter,
-  ReporterContext,
-  ReporterOnStartOptions,
-  // eslint-disable-next-line node/no-unpublished-import
-} from "@jest/reporters";
-import type {
-  AggregatedResult,
-  TestContext,
-  // eslint-disable-next-line node/no-unpublished-import
-} from "@jest/test-result";
-// eslint-disable-next-line node/no-unpublished-import
+import type { Reporter, ReporterContext } from "@jest/reporters";
+import type { AggregatedResult, TestContext } from "@jest/test-result";
 import type { Config } from "@jest/types";
+
+import {
+  convertResultsToDashboard,
+  printDashBoard,
+} from "./dashboard/index.js";
 
 export type ReporterOptions = {
   title?: string;
@@ -37,7 +32,7 @@ export class MarkdownDashboardReporter implements Reporter {
     this.context = reporterContext;
   }
 
-  onRunStart(results: AggregatedResult, options: ReporterOnStartOptions): void {
+  onRunStart() {
     // noop
   }
   getLastError() {
@@ -48,28 +43,11 @@ export class MarkdownDashboardReporter implements Reporter {
     testContexts: Set<TestContext>,
     results: AggregatedResult
   ): Promise<void> {
-    let resultText = `# ${this.title}\n\n`;
-    for (const testResultsByFile of results.testResults) {
-      resultText += `## ${path.relative("", testResultsByFile.testFilePath)}\n`;
-      let lastAncestorTitles: string[] = [];
-      for (const testResult of testResultsByFile.testResults) {
-        for (const [
-          index,
-          ancestorTitle,
-        ] of testResult.ancestorTitles.entries()) {
-          if (
-            lastAncestorTitles.length < index ||
-            ancestorTitle !== lastAncestorTitles[index]
-          ) {
-            resultText += `${"  ".repeat(index)}- ${ancestorTitle}\n`;
-          }
-        }
-        lastAncestorTitles = testResult.ancestorTitles;
-        resultText += `${"  ".repeat(testResult.ancestorTitles.length)}- ${
-          testResult.title
-        }\n`;
-      }
-    }
+    const dashboard = convertResultsToDashboard(results, {
+      title: this.title,
+      rootPath: process.cwd(),
+    });
+    const resultText = printDashBoard(dashboard);
     if (this.outputPath !== undefined && this.outputPath.length > 0) {
       await fs.mkdir(path.dirname(this.outputPath), { recursive: true });
       await fs.writeFile(this.outputPath, resultText);
