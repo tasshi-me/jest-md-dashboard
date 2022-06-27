@@ -18,29 +18,13 @@
     "markdown"
   ],
   "type": "module",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./lib/types/index.d.ts",
-        "default": "./lib/esm/index.js"
-      },
-      "require": {
-        "types": "./lib/types/index.d.cts",
-        "default": "./lib/cjs/index.cjs"
-      }
-    }
-  },
-  "types": "./lib/types/index.d.ts",
-  "main": "./lib/cjs/index.cjs",
+  "exports": "./lib/index.js",
   "engines": {
     "node": ">=14"
   },
   "scripts": {
     "prebuild": "run-s clean",
-    "build": "run-s build:*",
-    "build:esm": "esbuild --outdir=./lib/esm --platform=node --format=esm src/*.ts",
-    "build:cjs": "esbuild --out-extension:.js=.cjs --outdir=./lib/cjs --platform=node --format=cjs src/*.ts",
-    "build:types": "tsc --build tsconfig.json --force",
+    "build": "tsc --build tsconfig.json --force",
     "test": "jest",
     "generate-dashboard": "jest --config=./jest.generate-dashboard.config.cjs",
     "lint": "run-s lint:*",
@@ -64,7 +48,6 @@
     "@types/jest": "^28.1.3",
     "@typescript-eslint/parser": "^5.29.0",
     "babel-jest": "^28.1.1",
-    "esbuild": "^0.14.47",
     "eslint": "^8.18.0",
     "eslint-import-resolver-typescript": "^3.1.0",
     "eslint-plugin-import": "^2.26.0",

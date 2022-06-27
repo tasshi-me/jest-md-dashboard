@@ -1,13 +1,11 @@
 {
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2021",
+    "target": "ES2016",
     "module": "node16",
     "rootDir": "./src",
-    "outDir": "./lib/types",
-    "declaration": true,
-    "sourceMap": true,
-    "emitDeclarationOnly": true
+    "outDir": "./lib",
+    "declaration": true
   },
   "include": [
     "src/**/*"
