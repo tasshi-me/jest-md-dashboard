@@ -4,16 +4,18 @@ on:
 
 jobs:
   test:
-    name: Test
-    runs-on: ubuntu-latest
+    name: Test ${{ matrix.os }} ${{ matrix.node-version }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+        node-version: [14.x, 16.x, 18.x]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
-      - uses: nodenv/actions/node-version@main
-        id: nodenv
-      - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: "${{ steps.nodenv.outputs.node-version }}"
+          node-version: "${{ matrix.node-version }}"
       - name: yarn install, build, and test
         run: |
           yarn install --frozen-lockfile
