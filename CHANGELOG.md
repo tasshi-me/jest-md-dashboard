@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.2.0...jest-md-dashboard-v0.3.0) (2022-06-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* convert to pure ESM package (#11)
+
+### Miscellaneous Chores
+
+* convert to pure ESM package ([#11](https://github.com/mshrtsr/jest-md-dashboard/issues/11)) ([2fb5efb](https://github.com/mshrtsr/jest-md-dashboard/commit/2fb5efb1ee8b1520c5bb11d9d490482c121ddf19))
+
 ## [0.2.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.1.0...jest-md-dashboard-v0.2.0) (2022-06-25)
 
 
