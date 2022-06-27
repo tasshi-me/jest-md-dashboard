@@ -19,5 +19,5 @@ jobs:
           node-version: "${{ matrix.node-version }}"
       - run: yarn install --frozen-lockfile
       - run: yarn build
-      - run: yarn test
-      - run: yarn --silent test:generate-dashboard | tee -a $GITHUB_STEP_SUMMARY
+      - run: yarn test:generate-dashboard
+      - run: cat dashboard.md | tee -a $GITHUB_STEP_SUMMARY

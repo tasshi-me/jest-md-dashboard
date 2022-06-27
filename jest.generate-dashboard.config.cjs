@@ -4,6 +4,6 @@ const baseConfig = require("./jest.config.cjs");
 const config = {
   ...baseConfig,
   collectCoverage: false,
-  reporters: ["jest-md-dashboard"],
+  reporters: ["default", ["jest-md-dashboard", { outputPath: "dashboard.md" }]],
 };
 module.exports = config;
