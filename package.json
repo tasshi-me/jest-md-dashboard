@@ -26,7 +26,7 @@
     "prebuild": "run-s clean",
     "build": "tsc --build tsconfig.json --force",
     "test": "jest",
-    "generate-dashboard": "jest --config=./jest.generate-dashboard.config.cjs",
+    "test:generate-dashboard": "jest --config=./jest.generate-dashboard.config.cjs",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext .js,.mjs,.cjs,.ts,.mts,.cts ./",
     "lint:md": "prettier --check ./**/*.md",
