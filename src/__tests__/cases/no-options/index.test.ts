@@ -1,13 +1,15 @@
-import * as child_process from "child_process";
 import * as fs from "fs/promises";
 import path from "path";
+
+// @ts-ignore
+import { runJest } from "../../helpers/command";
 
 const jestConfig = path.resolve(__dirname, "jest.config.cjs");
 const expected = path.resolve(__dirname, "expected.md");
 
 describe("jest-md-dashboard", () => {
   it("can print dashboard to stdout without options", async () => {
-    const result = child_process.spawnSync("jest", [`--config=${jestConfig}`]);
+    const result = runJest(jestConfig);
 
     const stderr = result.stderr.toString();
     if (stderr.length > 0) {

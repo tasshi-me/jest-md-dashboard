@@ -9,4 +9,4 @@ coverage
 CHANGELOG.md
 
 # Ignore test cases
-__tests__
+src/__tests__/cases/**/*.md
