@@ -49,8 +49,10 @@ export class MarkdownDashboardReporter implements Reporter {
     });
     const resultText = printDashBoard(dashboard);
     if (this.outputPath !== undefined && this.outputPath.length > 0) {
-      await fs.mkdir(path.dirname(this.outputPath), { recursive: true });
-      await fs.writeFile(this.outputPath, resultText);
+      const absolutePath = path.resolve(this.outputPath);
+      await fs.mkdir(path.dirname(absolutePath), { recursive: true });
+      await fs.writeFile(absolutePath, resultText);
+      console.log(`\nDashboard is generated to ${absolutePath}`);
     } else {
       console.log(resultText);
     }
