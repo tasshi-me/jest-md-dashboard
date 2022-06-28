@@ -25,6 +25,7 @@
   "scripts": {
     "prebuild": "run-s clean",
     "build": "tsc --build tsconfig.json --force",
+    "start": "run-s 'build -w'",
     "test": "jest",
     "test:generate-dashboard": "jest --config=./jest.generate-dashboard.config.cjs",
     "lint": "run-s lint:*",
