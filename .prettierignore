@@ -10,3 +10,6 @@ CHANGELOG.md
 
 # Ignore test cases
 src/__tests__/cases/**/*.md
+
+# misc
+dashboard.md

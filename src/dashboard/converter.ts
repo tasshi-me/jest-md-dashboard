@@ -6,16 +6,30 @@ import {
   TestResult,
 } from "@jest/test-result";
 
-import { Dashboard, Describe, Test, TestFiles } from "./types.js";
+import { Dashboard, Describe, Test, TestFile } from "./types.js";
+
+export type PermalinkOption = {
+  hostname: string;
+  repository: string;
+  commit: string;
+  pattern: string;
+};
 
 export const convertResultsToDashboard = (
   results: AggregatedResult,
-  options: { title: string; rootPath: string }
+  options: {
+    title: string;
+    rootPath: string;
+    permalink?: PermalinkOption;
+  }
 ): Dashboard => {
   // TODO: create summary
 
-  const testFiles: TestFiles[] = results.testResults.map((resultByFile) =>
-    convertTestFile(resultByFile, { rootPath: options.rootPath })
+  const testFiles: TestFile[] = results.testResults.map((resultByFile) =>
+    convertTestFile(resultByFile, {
+      rootPath: options.rootPath,
+      permalink: options.permalink,
+    })
   );
   return {
     title: options.title,
@@ -24,10 +38,23 @@ export const convertResultsToDashboard = (
   };
 };
 
-const convertTestFile = (result: TestResult, options: { rootPath: string }) => {
+const convertTestFile = (
+  result: TestResult,
+  options: { rootPath: string; permalink?: PermalinkOption }
+): TestFile => {
   const filePath = path.relative(options.rootPath, result.testFilePath);
-  const describes = convertChildren(result.testResults);
-  return { filePath, children: describes };
+  let permalink: string | undefined;
+  if (options.permalink) {
+    permalink = options.permalink.pattern
+      /* eslint-disable no-template-curly-in-string */
+      .replace("${hostname}", options.permalink.hostname)
+      .replace("${repository}", options.permalink.repository)
+      .replace("${commit}", options.permalink.commit)
+      .replace("${filePath}", filePath);
+    /* eslint-enable no-template-curly-in-string */
+  }
+  const children = convertChildren(result.testResults);
+  return { filePath, children, permalink };
 };
 
 const convertChildren = (

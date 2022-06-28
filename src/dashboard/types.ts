@@ -1,11 +1,12 @@
 export type Dashboard = {
   title: string;
   summary: string;
-  testFiles: TestFiles[];
+  testFiles: TestFile[];
 };
 
-export type TestFiles = {
+export type TestFile = {
   filePath: string;
+  permalink?: string;
   children: Array<Describe | Test>;
 };
 

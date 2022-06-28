@@ -3,7 +3,8 @@ import { Dashboard, Describe, Test } from "./types.js";
 export const printDashBoard = (dashboard: Dashboard): string => {
   let resultText = `# ${dashboard.title}\n\n`;
   for (const file of dashboard.testFiles) {
-    resultText += `## ${file.filePath}\n`;
+    const link = file.permalink ? ` [[link](${file.permalink})]` : "";
+    resultText += `## ${file.filePath}${link}\n`;
     resultText += printChildren(file.children);
   }
 
