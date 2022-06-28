@@ -2,7 +2,8 @@ const path = require("path");
 
 /** @type {import('@jest/types').Config.InitialOptions} */
 const config = {
-  roots: [path.resolve(__dirname, "..", "..", "fixtures")],
+  rootDir: path.resolve(__dirname, "..", "..", "..", ".."),
+  roots: ["<rootDir>/src/__tests__/fixtures"],
   reporters: [["jest-md-dashboard", { permalink: false }]],
 };
 module.exports = config;

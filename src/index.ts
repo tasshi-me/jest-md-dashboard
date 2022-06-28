@@ -57,7 +57,7 @@ export class MarkdownDashboardReporter implements Reporter {
   ): Promise<void> {
     const dashboard = convertResultsToDashboard(results, {
       title: this.title,
-      rootPath: process.cwd(),
+      rootPath: this.globalConfig.rootDir,
       permalink: this.permalink,
     });
     const resultText = printDashBoard(dashboard);
