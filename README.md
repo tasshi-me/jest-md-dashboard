@@ -81,16 +81,15 @@ jest --config=./jest.print-dashboard.js
 
 ## Options
 
-| Name                 | Type                | Default                   | Description                                                                                                                 |
-|----------------------|---------------------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| `title`              | `string`            | `"Tests Dashboard"`       | The title of a dashboard.<br>It will be printed at the top of the markdown output.                                          |
-| `outputPath`         | `string`            | `undefined`               | The file path to output dashboard. If this option is specified, dashboard is printed to the file instead of stdout.         |
-| `permalink`            | `object` or `false` | `{(followings)}`          | Override permalink generation.<br>Set `false` to disable generation.                                                        |
-| `permalink.hostname`   | `string`            | `"github.com"`            | The hostname of permalink.<br>Specify if you using services other than github.com.<br>e.g. GitHub Enterprise  or GitLab     |
-| `permalink.repository` | `string`            | `${GITHUB_REPOSITORY}`    | The repository name of permalink. (`"<owner>/<repo>"`)                                                                      |
+| Name                   | Type                | Default                     | Description                                                                                                                 |
+| ---------------------- | ------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `title`                | `string`            | `"Tests Dashboard"`         | The title of a dashboard.<br>It will be printed at the top of the markdown output.                                          |
+| `outputPath`           | `string`            | `undefined`                 | The file path to output dashboard. If this option is specified, dashboard is printed to the file instead of stdout.         |
+| `permalink`            | `object` or `false` | `{(followings)}`            | Override permalink generation.<br>Set `false` to disable generation.                                                        |
+| `permalink.hostname`   | `string`            | `"github.com"`              | The hostname of permalink.<br>Specify if you using services other than github.com.<br>e.g. GitHub Enterprise or GitLab      |
+| `permalink.repository` | `string`            | `${GITHUB_REPOSITORY}`      | The repository name of permalink. (`"<owner>/<repo>"`)                                                                      |
 | `permalink.commit`     | `string`            | `${GITHUB_SHA}` ?? `"main"` | The commit hash of permalink.<br>You can also specify branch or tag.                                                        |
-| `permalink.pattern`    | `string`            | see description           | The template pattern of permalink.<br>Absence defaults to `"https://${hostname}/${repository}/blob/${commit}/${filePath}"`. |
-
+| `permalink.pattern`    | `string`            | see description             | The template pattern of permalink.<br>Absence defaults to `"https://${hostname}/${repository}/blob/${commit}/${filePath}"`. |
 
 ## Contribution
 
