@@ -1,6 +1,7 @@
 # jest-md-dashboard
 
 [![npm version](https://badge.fury.io/js/jest-md-dashboard.svg)](https://badge.fury.io/js/jest-md-dashboard)
+[![test](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/test.yml/badge.svg)](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/test.yml)
 [![lint](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/lint.yml/badge.svg)](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/lint.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
