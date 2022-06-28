@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.3.0...jest-md-dashboard-v0.3.1) (2022-06-28)
+
+
+### Bug Fixes
+
+* show outputPath when file generated ([7ff155f](https://github.com/mshrtsr/jest-md-dashboard/commit/7ff155fe0a568ea2a1020e17198a76b06ec88f4f))
+
 ## [0.3.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.2.0...jest-md-dashboard-v0.3.0) (2022-06-27)
 
 
