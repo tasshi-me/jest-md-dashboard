@@ -1,7 +1,24 @@
+import { SnapshotSummary, TestResult } from "@jest/test-result";
+
 export type Dashboard = {
   title: string;
-  summary: string;
+  summary: Summary;
   testFiles: TestFile[];
+};
+
+export type Summary = {
+  numFailedTests: number;
+  numFailedTestSuites: number;
+  numPassedTests: number;
+  numPassedTestSuites: number;
+  numPendingTests: number;
+  numTodoTests: number;
+  numPendingTestSuites: number;
+  numRuntimeErrorTestSuites: number;
+  numTotalTests: number;
+  numTotalTestSuites: number;
+  startTime: number;
+  totalRunTime: number;
 };
 
 export type TestFile = {

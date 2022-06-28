@@ -6,7 +6,7 @@ import {
   TestResult,
 } from "@jest/test-result";
 
-import { Dashboard, Describe, Test, TestFile } from "./types.js";
+import { Dashboard, Summary, Describe, Test, TestFile } from "./types.js";
 
 export type PermalinkOption = {
   hostname: string;
@@ -23,8 +23,7 @@ export const convertResultsToDashboard = (
     permalink?: PermalinkOption;
   }
 ): Dashboard => {
-  // TODO: create summary
-
+  const summary = convertSummary(results);
   const testFiles: TestFile[] = results.testResults.map((resultByFile) =>
     convertTestFile(resultByFile, {
       rootPath: options.rootPath,
@@ -33,9 +32,14 @@ export const convertResultsToDashboard = (
   );
   return {
     title: options.title,
-    summary: "",
+    summary: summary,
     testFiles: testFiles,
   };
+};
+
+const convertSummary = (results: AggregatedResult): Summary => {
+  const totalRunTime = (Date.now() - results.startTime) / 1000;
+  return { totalRunTime, ...results };
 };
 
 const convertTestFile = (
