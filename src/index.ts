@@ -85,7 +85,7 @@ const buildPermalinkOption = (
 
   let hostname = "github.com";
   let repository = process.env.GITHUB_REPOSITORY;
-  let commit = process.env.GITHUB_SHA;
+  let commit = process.env.GITHUB_SHA ?? "main";
   // eslint-disable-next-line no-template-curly-in-string
   let pattern = "https://${hostname}/${repository}/blob/${commit}/${filePath}";
 
