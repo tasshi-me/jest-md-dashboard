@@ -6,9 +6,9 @@ import {
   TestResult,
 } from "@jest/test-result";
 
-import { Dashboard, Describe, Test, TestFile } from "./types.js";
+import { Dashboard, Summary, Describe, Test, TestFile } from "./types.js";
 
-export type PermalinkOption = {
+export type Permalink = {
   hostname: string;
   repository: string;
   commit: string;
@@ -20,11 +20,10 @@ export const convertResultsToDashboard = (
   options: {
     title: string;
     rootPath: string;
-    permalink?: PermalinkOption;
+    permalink?: Permalink;
   }
 ): Dashboard => {
-  // TODO: create summary
-
+  const summary = convertSummary(results);
   const testFiles: TestFile[] = results.testResults.map((resultByFile) =>
     convertTestFile(resultByFile, {
       rootPath: options.rootPath,
@@ -33,14 +32,32 @@ export const convertResultsToDashboard = (
   );
   return {
     title: options.title,
-    summary: "",
+    summary: summary,
     testFiles: testFiles,
+  };
+};
+
+const convertSummary = (results: AggregatedResult): Summary => {
+  const totalRunTime = (Date.now() - results.startTime) / 1000;
+  return {
+    numFailedTests: results.numFailedTests,
+    numFailedTestSuites: results.numFailedTestSuites,
+    numPassedTests: results.numPassedTests,
+    numPassedTestSuites: results.numPassedTestSuites,
+    numPendingTests: results.numPendingTests,
+    numTodoTests: results.numTodoTests,
+    numPendingTestSuites: results.numPendingTestSuites,
+    numRuntimeErrorTestSuites: results.numRuntimeErrorTestSuites,
+    numTotalTests: results.numTotalTests,
+    numTotalTestSuites: results.numTotalTestSuites,
+    startTime: results.startTime,
+    totalRunTime,
   };
 };
 
 const convertTestFile = (
   result: TestResult,
-  options: { rootPath: string; permalink?: PermalinkOption }
+  options: { rootPath: string; permalink?: Permalink }
 ): TestFile => {
   const filePath = path.relative(options.rootPath, result.testFilePath);
   let permalink: string | undefined;
