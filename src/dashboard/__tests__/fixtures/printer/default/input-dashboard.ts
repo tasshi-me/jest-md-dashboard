@@ -1,9 +1,9 @@
 // @ts-ignore
-import type { Dashboard } from "../../../types";
+import type { Dashboard, TestFile } from "../../../../types";
 // @ts-ignore
-import { testDuration, testStartTime } from "../../helpers/datetime";
+import { testDuration, testStartTime } from "../../../helpers/datetime";
 
-const testFiles = [
+const testFiles: TestFile[] = [
   {
     filePath: "src/__tests__/sample-1.test.ts",
     children: [
