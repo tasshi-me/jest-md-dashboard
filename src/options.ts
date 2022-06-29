@@ -3,7 +3,7 @@ import { Permalink } from "./dashboard/index.js";
 import { ReporterOptions } from "./index.js";
 
 export const buildTitle = (title?: string): string => {
-  return title ?? "Tests Dashboard";
+  return title ?? "Test Dashboard";
 };
 
 export const buildPermalink = (

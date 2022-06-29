@@ -3,7 +3,7 @@ import { buildTitle, buildPermalink } from "../options";
 
 describe("buildTitle", () => {
   it("should return default value", () => {
-    expect(buildTitle()).toBe("Tests Dashboard");
+    expect(buildTitle()).toBe("Test Dashboard");
   });
   it("should return input value", () => {
     expect(buildTitle("My dashboard")).toBe("My dashboard");

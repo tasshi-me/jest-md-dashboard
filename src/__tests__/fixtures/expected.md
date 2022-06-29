@@ -1,4 +1,4 @@
-# Tests Dashboard
+# Test Dashboard
 
 
 | :clock10: Start time | :hourglass: Duration |

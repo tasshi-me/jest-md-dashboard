@@ -84,7 +84,7 @@ jest --config=./jest.print-dashboard.js
 
 | Name                   | Type                | Default                     | Description                                                                                                                 |
 | ---------------------- | ------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `title`                | `string`            | `"Tests Dashboard"`         | The title of a dashboard.<br>It will be printed at the top of the markdown output.                                          |
+| `title`                | `string`            | `"Test Dashboard"`          | The title of a dashboard.<br>It will be printed at the top of the markdown output.                                          |
 | `outputPath`           | `string`            | `undefined`                 | The file path to output dashboard. If this option is specified, dashboard is printed to the file instead of stdout.         |
 | `permalink`            | `object` or `false` | `{(followings)}`            | Override permalink generation.<br>Set `false` to disable generation.                                                        |
 | `permalink.hostname`   | `string`            | `"github.com"`              | The hostname of permalink.<br>Specify if you using services other than github.com.<br>e.g. GitHub Enterprise or GitLab      |
