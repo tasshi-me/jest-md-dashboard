@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.3.1...jest-md-dashboard-v0.4.0) (2022-06-29)
+
+
+### Features
+
+* add a test summary ([#21](https://github.com/mshrtsr/jest-md-dashboard/issues/21)) ([df28a9c](https://github.com/mshrtsr/jest-md-dashboard/commit/df28a9c014a492734e59e57ee79b88a96b1eda9f))
+* add permalink option ([#18](https://github.com/mshrtsr/jest-md-dashboard/issues/18)) ([124b765](https://github.com/mshrtsr/jest-md-dashboard/commit/124b7659579f8e205563080f46edf209151dc1cd))
+
+
+### Bug Fixes
+
+* use config.rootDir to generate file path ([ec74a88](https://github.com/mshrtsr/jest-md-dashboard/commit/ec74a884677ff695365b7c02d6d40af61c698852))
+
 ## [0.3.1](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.3.0...jest-md-dashboard-v0.3.1) (2022-06-28)
 
 
