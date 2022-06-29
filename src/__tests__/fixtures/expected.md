@@ -1,5 +1,15 @@
 # Tests Dashboard
 
+
+| :clock10: Start time | :hourglass: Duration |
+| --- | ---: |
+|0|0 s|
+
+| | :white_check_mark: Passed | :x: Failed | :construction: Todo | :white_circle: Total |
+| --- | ---: | ---: | ---:| ---: |
+|Test Suites|2|0|-|2|
+|Tests|17|0|1|18|
+
 ## src/__tests__/fixtures/sample-1.test.ts
 - describe depth 1
   - test 1
@@ -26,4 +36,3 @@
   - test 2
   - test 3
   - test 4
-

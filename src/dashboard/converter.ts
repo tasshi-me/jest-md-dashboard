@@ -8,7 +8,7 @@ import {
 
 import { Dashboard, Summary, Describe, Test, TestFile } from "./types.js";
 
-export type PermalinkOption = {
+export type Permalink = {
   hostname: string;
   repository: string;
   commit: string;
@@ -20,7 +20,7 @@ export const convertResultsToDashboard = (
   options: {
     title: string;
     rootPath: string;
-    permalink?: PermalinkOption;
+    permalink?: Permalink;
   }
 ): Dashboard => {
   const summary = convertSummary(results);
@@ -39,12 +39,25 @@ export const convertResultsToDashboard = (
 
 const convertSummary = (results: AggregatedResult): Summary => {
   const totalRunTime = (Date.now() - results.startTime) / 1000;
-  return { totalRunTime, ...results };
+  return {
+    numFailedTests: results.numFailedTests,
+    numFailedTestSuites: results.numFailedTestSuites,
+    numPassedTests: results.numPassedTests,
+    numPassedTestSuites: results.numPassedTestSuites,
+    numPendingTests: results.numPendingTests,
+    numTodoTests: results.numTodoTests,
+    numPendingTestSuites: results.numPendingTestSuites,
+    numRuntimeErrorTestSuites: results.numRuntimeErrorTestSuites,
+    numTotalTests: results.numTotalTests,
+    numTotalTestSuites: results.numTotalTestSuites,
+    startTime: results.startTime,
+    totalRunTime,
+  };
 };
 
 const convertTestFile = (
   result: TestResult,
-  options: { rootPath: string; permalink?: PermalinkOption }
+  options: { rootPath: string; permalink?: Permalink }
 ): TestFile => {
   const filePath = path.relative(options.rootPath, result.testFilePath);
   let permalink: string | undefined;

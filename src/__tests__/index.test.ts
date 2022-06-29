@@ -2,11 +2,11 @@ import * as fs from "fs/promises";
 import path from "path";
 
 // @ts-ignore
-import { runJest } from "../../helpers/command";
+import { runJest } from "./helpers/command";
 
-const jestConfig = path.resolve(__dirname, "jest.config.cjs");
-const expected = path.resolve(__dirname, "expected.md");
-const outputPath = path.resolve(__dirname, "dist", "dashboard.md");
+const jestConfig = path.resolve(__dirname, "fixtures", "jest.config.cjs");
+const expectedPath = path.resolve(__dirname, "fixtures", "expected.md");
+const outputPath = path.resolve(__dirname, "fixtures", "dist", "dashboard.md");
 
 describe("jest-md-dashboard", () => {
   beforeAll(async () => {
@@ -20,8 +20,9 @@ describe("jest-md-dashboard", () => {
       console.log(stderr);
     }
     expect(result.error).toBeUndefined();
-    expect(await fs.readFile(outputPath, "utf-8")).toBe(
-      await fs.readFile(expected, "utf-8")
-    );
+
+    const rawOutput = await fs.readFile(outputPath, "utf-8");
+    const output = rawOutput.replace(/\|.+\|\d(\.\d+)? s\|/, "|0|0 s|");
+    expect(output).toBe(await fs.readFile(expectedPath, "utf-8"));
   });
 });
