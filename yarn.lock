@@ -4985,7 +4985,7 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
-release-please@^13.18.7:
+release-please@^13.19.0:
   version "13.19.0"
   resolved "https://registry.yarnpkg.com/release-please/-/release-please-13.19.0.tgz#d1c3422c3d7695ca6db356b398292bf95e677b49"
   integrity sha512-0lf2Fzm25tiY9TRw1WSbSwy1CARu7MoRxTaqWb091B1ncHZEgPKX8EXc4XqMbE7+7FtwQgtTgGUSxtm91Rwo6Q==
