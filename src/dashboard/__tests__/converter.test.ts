@@ -1,14 +1,9 @@
-// @ts-ignore
-import { buildPermalink } from "../../options";
-// @ts-ignore
-import { convertResultsToDashboard } from "../converter";
+import { buildPermalink } from "../../options.js";
+import { convertResultsToDashboard } from "../converter.js";
 
-// @ts-ignore
-import { dashboard as expected } from "./fixtures/converter/expected-dashboard";
-// @ts-ignore
-import { results } from "./fixtures/converter/input-results";
-// @ts-ignore
-import { testDuration, testStartTime } from "./helpers/datetime";
+import { dashboard as expected } from "./fixtures/converter/expected-dashboard.js";
+import { results } from "./fixtures/converter/input-results.js";
+import { testDuration, testStartTime } from "./helpers/datetime.js";
 
 delete process.env.GITHUB_REPOSITORY;
 delete process.env.GITHUB_SHA;

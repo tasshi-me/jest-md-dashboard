@@ -1,5 +1,4 @@
-// @ts-ignore
-import { buildTitle, buildPermalink } from "../options";
+import { buildTitle, buildPermalink } from "../options.js";
 
 describe("buildTitle", () => {
   it("should return default value", () => {
@@ -64,16 +63,5 @@ describe("buildPermalink", () => {
 
   it("should return false when input is false", function () {
     expect(buildPermalink(false)).toBeUndefined();
-  });
-
-  it("should throw an error if input is illegal type", () => {
-    const errorMessage = "`permalink` option must be object or boolean";
-    expect(() => buildPermalink(0)).toThrow(errorMessage);
-    expect(() => buildPermalink(1)).toThrow(errorMessage);
-    expect(() => buildPermalink("hoge")).toThrow(errorMessage);
-    expect(() => buildPermalink("true")).toThrow(errorMessage);
-    expect(() => buildPermalink("false")).toThrow(errorMessage);
-    expect(() => buildPermalink("true")).toThrow(errorMessage);
-    expect(() => buildPermalink("true")).toThrow(errorMessage);
   });
 });

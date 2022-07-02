@@ -1,13 +1,10 @@
-import path from "path";
-
 import {
   AggregatedResult,
   SnapshotSummary,
   TestResult,
 } from "@jest/test-result";
 
-// @ts-ignore
-import { testStartTime } from "../../helpers/datetime";
+import { testStartTime } from "../../helpers/datetime.js";
 
 const testResults: TestResult[] = [
   {

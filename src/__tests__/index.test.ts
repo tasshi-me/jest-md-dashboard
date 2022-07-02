@@ -1,8 +1,7 @@
 import * as fs from "fs/promises";
 import path from "path";
 
-// @ts-ignore
-import { runJest } from "./helpers/command";
+import { runJest } from "./helpers/command.js";
 
 const jestConfig = path.resolve(__dirname, "fixtures", "jest.config.cjs");
 const expectedPath = path.resolve(__dirname, "fixtures", "expected.md");

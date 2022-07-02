@@ -1,14 +1,10 @@
-// @ts-ignore
 import fs from "fs";
 import path from "path";
 
-// @ts-ignore
-import { printDashBoard } from "../printer";
+import { printDashBoard } from "../printer.js";
 
-// @ts-ignore
-import { dashboard } from "./fixtures/printer/default/input-dashboard";
-// @ts-ignore
-import { dashboard as noPermalinkDashboard } from "./fixtures/printer/no-permalink/input-dashboard";
+import { dashboard } from "./fixtures/printer/default/input-dashboard.js";
+import { dashboard as noPermalinkDashboard } from "./fixtures/printer/no-permalink/input-dashboard.js";
 
 const expected = fs.readFileSync(
   path.resolve(__dirname, "./fixtures/printer/default/expected-dashboard.md"),
