@@ -14,4 +14,4 @@ const config = {
     "^(\\.{1,2}/.*)\\.js$": "$1",
   },
 };
-module.exports = config;
+export default config;

@@ -27,7 +27,7 @@
     "build": "tsc --build tsconfig.json --force",
     "start": "run-s 'build -w'",
     "test": "jest",
-    "test:generate-dashboard": "jest --config=./jest.generate-dashboard.config.cjs",
+    "test:generate-dashboard": "jest --config=./jest.generate-dashboard.config.js",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --ext .js,.mjs,.cjs,.ts,.mts,.cts ./",
     "lint:md": "prettier --check ./**/*.md",
