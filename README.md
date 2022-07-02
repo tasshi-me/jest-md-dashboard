@@ -40,7 +40,7 @@ const config = {
 module.exports = config;
 ```
 
-Run jest and the markdown output is printed to stdout.
+Run jest and the markdown dashboard is generated to `test-dashboard.md`.
 
 ### With options
 
@@ -85,7 +85,7 @@ jest --config=./jest.print-dashboard.js
 | Name                   | Type                | Default                     | Description                                                                                                                 |
 | ---------------------- | ------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | `title`                | `string`            | `"Test Dashboard"`          | The title of a dashboard.<br>It will be printed at the top of the markdown output.                                          |
-| `outputPath`           | `string`            | `undefined`                 | The file path to output dashboard. If this option is specified, dashboard is printed to the file instead of stdout.         |
+| `outputPath`           | `string`            | `test-dashboard.md`         | The file path to output dashboard. If you want to output to stdout, specify `-`.                                            |
 | `permalink`            | `object` or `false` | `{(followings)}`            | Override permalink generation.<br>Set `false` to disable generation.                                                        |
 | `permalink.hostname`   | `string`            | `"github.com"`              | The hostname of permalink.<br>Specify if you using services other than github.com.<br>e.g. GitHub Enterprise or GitLab      |
 | `permalink.repository` | `string`            | `${GITHUB_REPOSITORY}`      | The repository name of permalink. (`"<owner>/<repo>"`)                                                                      |

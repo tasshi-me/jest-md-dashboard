@@ -1,4 +1,4 @@
-import { buildTitle, buildPermalink } from "../options.js";
+import { buildTitle, buildOutputPath, buildPermalink } from "../options.js";
 
 describe("buildTitle", () => {
   it("should return default value", () => {
@@ -6,6 +6,17 @@ describe("buildTitle", () => {
   });
   it("should return input value", () => {
     expect(buildTitle("My dashboard")).toBe("My dashboard");
+  });
+});
+
+describe("buildOutputPath", () => {
+  it("should return default value", () => {
+    expect(buildOutputPath()).toBe("test-dashboard.md");
+  });
+  it("should return input value", () => {
+    expect(buildOutputPath("/path/to/dashboard.md")).toBe(
+      "/path/to/dashboard.md"
+    );
   });
 });
 
