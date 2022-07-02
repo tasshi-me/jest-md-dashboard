@@ -51,7 +51,7 @@
     "@typescript-eslint/parser": "^5.30.3",
     "babel-jest": "^28.1.2",
     "eslint": "^8.18.0",
-    "eslint-import-resolver-typescript": "^3.1.4",
+    "eslint-import-resolver-typescript": "^3.1.5",
     "eslint-plugin-import": "^2.26.0",
     "jest": "^28.1.2",
     "jest-cli": "^28.1.2",
