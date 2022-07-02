@@ -6,6 +6,10 @@ export const buildTitle = (title?: string): string => {
   return title ?? "Test Dashboard";
 };
 
+export const buildOutputPath = (outputPath?: string): string => {
+  return outputPath ?? "test-dashboard.md";
+};
+
 export const buildPermalink = (
   permalink?: ReporterOptions["permalink"]
 ): Permalink | undefined => {

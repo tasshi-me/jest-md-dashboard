@@ -10,7 +10,7 @@ import {
   convertResultsToDashboard,
   printDashBoard,
 } from "./dashboard/index.js";
-import { buildTitle, buildPermalink } from "./options.js";
+import { buildTitle, buildPermalink, buildOutputPath } from "./options.js";
 
 export type ReporterOptions = {
   title?: string;
@@ -29,7 +29,7 @@ export class MarkdownDashboardReporter implements Reporter {
   private readonly globalConfig: Config.GlobalConfig;
   private readonly context: ReporterContext;
   private readonly title: string;
-  private readonly outputPath?: string;
+  private readonly outputPath: string;
   private readonly permalink?: Permalink;
 
   constructor(
@@ -41,7 +41,7 @@ export class MarkdownDashboardReporter implements Reporter {
     this.context = reporterContext;
 
     this.title = buildTitle(reporterOptions.title);
-    this.outputPath = reporterOptions.outputPath;
+    this.outputPath = buildOutputPath(reporterOptions.outputPath);
     this.permalink = buildPermalink(reporterOptions.permalink);
   }
 
@@ -62,13 +62,13 @@ export class MarkdownDashboardReporter implements Reporter {
       permalink: this.permalink,
     });
     const resultText = printDashBoard(dashboard);
-    if (this.outputPath !== undefined && this.outputPath.length > 0) {
+    if (this.outputPath === "-") {
+      console.log(resultText);
+    } else {
       const absolutePath = path.resolve(this.outputPath);
       await fs.mkdir(path.dirname(absolutePath), { recursive: true });
       await fs.writeFile(absolutePath, resultText);
       console.log(`\nDashboard is generated to ${absolutePath}`);
-    } else {
-      console.log(resultText);
     }
   }
 }
