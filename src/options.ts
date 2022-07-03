@@ -1,4 +1,9 @@
-import { Permalink } from "./dashboard/index.js";
+import fs from "fs";
+import path from "path";
+
+import git from "isomorphic-git";
+
+import { parseRemoteUrl } from "./git.js";
 
 import { ReporterOptions } from "./index.js";
 
@@ -10,32 +15,62 @@ export const buildOutputPath = (outputPath?: string): string => {
   return outputPath ?? "test-dashboard.md";
 };
 
-export const buildPermalink = (
-  permalink?: ReporterOptions["permalink"]
-): Permalink | undefined => {
-  if (
-    permalink !== undefined &&
-    typeof permalink !== "boolean" &&
-    typeof permalink !== "object"
-  ) {
-    throw new Error("`permalink` option must be object or boolean");
+export const buildPermalinkBaseUrl = async ({
+  permalinkBaseUrl,
+  jestRootDir,
+}: {
+  permalinkBaseUrl?: ReporterOptions["permalinkBaseUrl"];
+  jestRootDir: string;
+}): Promise<string | undefined> => {
+  if (permalinkBaseUrl) {
+    return permalinkBaseUrl;
   }
 
-  let hostname = "github.com";
-  let repository = process.env.GITHUB_REPOSITORY;
-  let commit = process.env.GITHUB_SHA ?? "main";
-  // eslint-disable-next-line no-template-curly-in-string
-  let pattern = "https://${hostname}/${repository}/blob/${commit}/${filePath}";
+  if (process.env.GITHUB_ACTIONS) {
+    if (
+      !process.env.GITHUB_SERVER_URL ||
+      !process.env.GITHUB_REPOSITORY ||
+      !process.env.GITHUB_SHA ||
+      !process.env.GITHUB_WORKSPACE
+    ) {
+      throw new Error(
+        "The following environment variables are required for the GitHub Actions environment\n- GITHUB_SERVER_URL\n- GITHUB_REPOSITORY\n- GITHUB_SHA\n- GITHUB_WORKSPACE"
+      );
+    }
+    const serverUrl = process.env.GITHUB_SERVER_URL;
+    const repository = process.env.GITHUB_REPOSITORY;
+    const commit = process.env.GITHUB_SHA;
+    const rootDir = process.env.GITHUB_WORKSPACE;
+    const subtree = path.relative(rootDir, jestRootDir);
+    const trailingSlash =
+      subtree.length > 0 && !subtree.endsWith("/") ? "/" : "";
+    return `${serverUrl}/${repository}/blob/${commit}/${subtree}${trailingSlash}`;
+  }
 
-  if (typeof permalink === "boolean" && !permalink) return undefined;
-  if (typeof permalink === "object" && permalink !== null) {
-    if (permalink.hostname) hostname = permalink.hostname;
-    if (permalink.repository) repository = permalink.repository;
-    if (permalink.commit) commit = permalink.commit;
-    if (permalink.pattern) pattern = permalink.pattern;
+  const rootDir = await git
+    .findRoot({ fs, filepath: jestRootDir })
+    .then((dir) => dir)
+    .catch(async () => undefined);
+  if (rootDir === undefined) {
+    console.log("permalink disabled because project is not a git repository");
+    return undefined;
   }
-  if (hostname && repository && commit && pattern) {
-    return { hostname, repository, commit, pattern };
+
+  try {
+    const remotes = await git.listRemotes({ fs, dir: rootDir });
+    if (remotes.length === 0) {
+      console.error("no remote URL found.");
+      return undefined;
+    }
+    const remote = remotes[0];
+    const { serverUrl, repository } = parseRemoteUrl(remote.url);
+    const commit = await git.resolveRef({ fs, dir: rootDir, ref: "HEAD" });
+    const subtree = path.relative(rootDir, jestRootDir);
+    const trailingSlash =
+      subtree.length > 0 && !subtree.endsWith("/") ? "/" : "";
+    return `${serverUrl}/${repository}/blob/${commit}/${subtree}${trailingSlash}`;
+  } catch (e) {
+    console.error(e);
+    return undefined;
   }
-  return undefined;
 };

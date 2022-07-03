@@ -19,12 +19,12 @@ const noPermalinkExpected = fs.readFileSync(
 );
 
 describe("printDashBoard", () => {
-  it("should print dashboard correctly", function () {
+  it("should print dashboard correctly", () => {
     const actual = printDashBoard(dashboard);
     expect(actual).toBe(expected);
   });
 
-  it("should print dashboard without permalink", function () {
+  it("should print dashboard without permalink", () => {
     const actual = printDashBoard(noPermalinkDashboard);
     expect(actual).toBe(noPermalinkExpected);
   });

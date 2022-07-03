@@ -6,23 +6,19 @@ import type { AggregatedResult, TestContext } from "@jest/test-result";
 import type { Config } from "@jest/types";
 
 import {
-  Permalink,
   convertResultsToDashboard,
   printDashBoard,
 } from "./dashboard/index.js";
-import { buildTitle, buildPermalink, buildOutputPath } from "./options.js";
+import {
+  buildTitle,
+  buildPermalinkBaseUrl,
+  buildOutputPath,
+} from "./options.js";
 
 export type ReporterOptions = {
   title?: string;
   outputPath?: string;
-  permalink?:
-    | {
-        hostname?: string;
-        repository?: string;
-        commit?: string;
-        pattern?: string;
-      }
-    | boolean;
+  permalinkBaseUrl?: string;
 };
 
 export class MarkdownDashboardReporter implements Reporter {
@@ -30,7 +26,7 @@ export class MarkdownDashboardReporter implements Reporter {
   private readonly context: ReporterContext;
   private readonly title: string;
   private readonly outputPath: string;
-  private readonly permalink?: Permalink;
+  private readonly permalinkBaseUrl: Promise<string | undefined>;
 
   constructor(
     globalConfig: Config.GlobalConfig,
@@ -42,7 +38,10 @@ export class MarkdownDashboardReporter implements Reporter {
 
     this.title = buildTitle(reporterOptions.title);
     this.outputPath = buildOutputPath(reporterOptions.outputPath);
-    this.permalink = buildPermalink(reporterOptions.permalink);
+    this.permalinkBaseUrl = buildPermalinkBaseUrl({
+      permalinkBaseUrl: reporterOptions.permalinkBaseUrl,
+      jestRootDir: this.globalConfig.rootDir,
+    });
   }
 
   onRunStart() {
@@ -56,10 +55,11 @@ export class MarkdownDashboardReporter implements Reporter {
     testContexts: Set<TestContext>,
     results: AggregatedResult
   ): Promise<void> {
+    const permalinkBaseUrl = await this.permalinkBaseUrl;
     const dashboard = convertResultsToDashboard(results, {
       title: this.title,
-      rootPath: this.globalConfig.rootDir,
-      permalink: this.permalink,
+      jestRootDir: this.globalConfig.rootDir,
+      permalinkBaseUrl,
     });
     const resultText = printDashBoard(dashboard);
     if (this.outputPath === "-") {

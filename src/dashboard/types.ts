@@ -1,5 +1,3 @@
-import { SnapshotSummary, TestResult } from "@jest/test-result";
-
 export type Dashboard = {
   title: string;
   summary: Summary;
