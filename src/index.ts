@@ -9,6 +9,7 @@ import {
   convertResultsToDashboard,
   printDashBoard,
 } from "./dashboard/index.js";
+import { Logger } from "./log.js";
 import {
   buildTitle,
   buildPermalinkBaseUrl,
@@ -24,6 +25,7 @@ export type ReporterOptions = {
 export class MarkdownDashboardReporter implements Reporter {
   private readonly globalConfig: Config.GlobalConfig;
   private readonly context: ReporterContext;
+  private readonly log: Logger;
   private readonly title: string;
   private readonly outputPath: string;
   private readonly permalinkBaseUrl: Promise<string | undefined>;
@@ -36,25 +38,28 @@ export class MarkdownDashboardReporter implements Reporter {
     this.globalConfig = globalConfig;
     this.context = reporterContext;
 
+    this.log = new Logger(this.globalConfig.silent);
+
     this.title = buildTitle(reporterOptions.title);
     this.outputPath = buildOutputPath(reporterOptions.outputPath);
     this.permalinkBaseUrl = buildPermalinkBaseUrl({
       permalinkBaseUrl: reporterOptions.permalinkBaseUrl,
       jestRootDir: this.globalConfig.rootDir,
+      log: this.log,
     });
   }
 
-  onRunStart() {
+  onRunStart = () => {
     // noop
-  }
-  getLastError() {
+  };
+  getLastError = () => {
     // noop
-  }
+  };
 
-  async onRunComplete(
+  onRunComplete = async (
     testContexts: Set<TestContext>,
     results: AggregatedResult
-  ): Promise<void> {
+  ): Promise<void> => {
     const permalinkBaseUrl = await this.permalinkBaseUrl;
     const dashboard = convertResultsToDashboard(results, {
       title: this.title,
@@ -68,9 +73,9 @@ export class MarkdownDashboardReporter implements Reporter {
       const absolutePath = path.resolve(this.outputPath);
       await fs.mkdir(path.dirname(absolutePath), { recursive: true });
       await fs.writeFile(absolutePath, resultText);
-      console.log(`\nDashboard is generated to ${absolutePath}`);
+      this.log.info(`Dashboard is generated to ${absolutePath}`);
     }
-  }
+  };
 }
 
 export default MarkdownDashboardReporter;

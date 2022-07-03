@@ -4,6 +4,7 @@ import path from "path";
 import git from "isomorphic-git";
 
 import { parseRemoteUrl } from "./git.js";
+import { Logger } from "./log.js";
 
 import { ReporterOptions } from "./index.js";
 
@@ -18,9 +19,11 @@ export const buildOutputPath = (outputPath?: string): string => {
 export const buildPermalinkBaseUrl = async ({
   permalinkBaseUrl,
   jestRootDir,
+  log,
 }: {
   permalinkBaseUrl?: ReporterOptions["permalinkBaseUrl"];
   jestRootDir: string;
+  log: Logger;
 }): Promise<string | undefined> => {
   if (permalinkBaseUrl) {
     return permalinkBaseUrl;
@@ -52,14 +55,14 @@ export const buildPermalinkBaseUrl = async ({
     .then((dir) => dir)
     .catch(async () => undefined);
   if (rootDir === undefined) {
-    console.log("permalink disabled because project is not a git repository");
+    log.info("permalink disabled because project is not a git repository");
     return undefined;
   }
 
   try {
     const remotes = await git.listRemotes({ fs, dir: rootDir });
     if (remotes.length === 0) {
-      console.error("no remote URL found.");
+      log.error("no remote URL found.");
       return undefined;
     }
     const remote = remotes[0];
@@ -70,7 +73,7 @@ export const buildPermalinkBaseUrl = async ({
       subtree.length > 0 && !subtree.endsWith("/") ? "/" : "";
     return `${serverUrl}/${repository}/blob/${commit}/${subtree}${trailingSlash}`;
   } catch (e) {
-    console.error(e);
+    log.error(e);
     return undefined;
   }
 };

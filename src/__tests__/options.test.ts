@@ -5,11 +5,14 @@ import path from "path";
 
 import git from "isomorphic-git";
 
+import { Logger } from "../log.js";
 import {
   buildTitle,
   buildOutputPath,
   buildPermalinkBaseUrl,
 } from "../options.js";
+
+const log = new Logger();
 
 describe("buildTitle", () => {
   it("should return default value", () => {
@@ -51,6 +54,7 @@ describe("buildPermalinkBaseUrl", () => {
     const actual = await buildPermalinkBaseUrl({
       permalinkBaseUrl: input,
       jestRootDir: "/path/to/repository/",
+      log,
     });
     expect(actual).toBe(input);
   });
@@ -67,6 +71,7 @@ describe("buildPermalinkBaseUrl", () => {
     it("should return permalinkBaseUrl", async () => {
       const actual = await buildPermalinkBaseUrl({
         jestRootDir: "/path/to/repository/",
+        log,
       });
       const expected =
         "https://github.com/mshrtsr/jest-md-dashboard/blob/main/";
@@ -77,6 +82,7 @@ describe("buildPermalinkBaseUrl", () => {
       process.env.GITHUB_SERVER_URL = "https://github.example.com";
       const actual = await buildPermalinkBaseUrl({
         jestRootDir: "/path/to/repository",
+        log,
       });
       const expected =
         "https://github.example.com/mshrtsr/jest-md-dashboard/blob/main/";
@@ -86,6 +92,7 @@ describe("buildPermalinkBaseUrl", () => {
     it("should return permalinkBaseUrl if jest runs on subtree", async () => {
       const actual = await buildPermalinkBaseUrl({
         jestRootDir: "/path/to/repository/subtree",
+        log,
       });
       const expected =
         "https://github.com/mshrtsr/jest-md-dashboard/blob/main/subtree/";
@@ -95,7 +102,10 @@ describe("buildPermalinkBaseUrl", () => {
     it("should throw Error if required variables are missing", async () => {
       delete process.env.GITHUB_SERVER_URL;
       await expect(() =>
-        buildPermalinkBaseUrl({ jestRootDir: "" })
+        buildPermalinkBaseUrl({
+          jestRootDir: "/path/to/repository/subtree",
+          log,
+        })
       ).rejects.toThrow(
         "The following environment variables are required for the GitHub Actions environment\n- GITHUB_SERVER_URL\n- GITHUB_REPOSITORY\n- GITHUB_SHA\n- GITHUB_WORKSPACE"
       );
@@ -121,7 +131,10 @@ describe("buildPermalinkBaseUrl", () => {
         author: { name: "test", email: "git@example.com" },
       });
 
-      const actual = await buildPermalinkBaseUrl({ jestRootDir: gitProject });
+      const actual = await buildPermalinkBaseUrl({
+        jestRootDir: gitProject,
+        log,
+      });
       const expected = `https://github.com/mshrtsr/jest-md-dashboard/blob/${sha}/`;
       expect(actual).toBe(expected);
     });
@@ -131,6 +144,7 @@ describe("buildPermalinkBaseUrl", () => {
       );
       const actual = await buildPermalinkBaseUrl({
         jestRootDir: nonGitProject,
+        log: new Logger(true),
       });
       expect(actual).toBeUndefined();
     });
