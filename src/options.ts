@@ -58,11 +58,11 @@ export const buildPermalinkBaseUrl = async ({
 
   try {
     const remotes = await git.listRemotes({ fs, dir: rootDir });
-    const remote = remotes.at(0);
-    if (remote === undefined) {
+    if (remotes.length === 0) {
       console.error("no remote URL found.");
       return undefined;
     }
+    const remote = remotes[0];
     const { serverUrl, repository } = parseRemoteUrl(remote.url);
     const commit = await git.resolveRef({ fs, dir: rootDir, ref: "HEAD" });
     const subtree = path.relative(rootDir, jestRootDir);
