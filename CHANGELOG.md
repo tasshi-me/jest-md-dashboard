@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.6.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.5.0...jest-md-dashboard-v0.6.0) (2022-07-03)
+
+
+### Features
+
+* show summary for each test files ([7996c7e](https://github.com/mshrtsr/jest-md-dashboard/commit/7996c7e2654cc6eb159f1b9bcd96375ab0fe7b64))
+* show the status icon for ancestors. ([a7550f8](https://github.com/mshrtsr/jest-md-dashboard/commit/a7550f836c0be1144c2fb710951fd0ca61342d41))
+* show the status icon for each test. ([59f9613](https://github.com/mshrtsr/jest-md-dashboard/commit/59f9613a065eefd0f2c9d053f3af5ceed8f7d369))
+
+
+### Bug Fixes
+
+* inherit `silent` from jest global config ([d5876dd](https://github.com/mshrtsr/jest-md-dashboard/commit/d5876dda08b6ed90d2959e859e98e1e2fc3ef7ab))
+
 ## [0.5.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.4.0...jest-md-dashboard-v0.5.0) (2022-07-03)
 
 
