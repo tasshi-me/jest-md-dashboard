@@ -12,18 +12,21 @@ const testFiles: TestFile[] = [
       {
         type: "describe",
         describe: "describe depth 1",
+        status: "passed",
         children: [
           { type: "test", title: "test 1", status: "passed" },
           { type: "test", title: "test 2", status: "passed" },
           {
             type: "describe",
             describe: "describe depth 2",
+            status: "passed",
             children: [
               { type: "test", title: "test 1", status: "passed" },
               { type: "test", title: "test 2", status: "passed" },
               {
                 type: "describe",
                 describe: "describe depth 3",
+                status: "passed",
                 children: [
                   { type: "test", title: "test 1", status: "passed" },
                   { type: "test", title: "test 2", status: "passed" },
@@ -34,6 +37,7 @@ const testFiles: TestFile[] = [
           {
             type: "describe",
             describe: "describe depth 2-2",
+            status: "passed",
             children: [
               { type: "test", title: "test 1", status: "passed" },
               { type: "test", title: "test 2", status: "todo" },
@@ -46,6 +50,7 @@ const testFiles: TestFile[] = [
       {
         type: "describe",
         describe: "describe depth 1-2",
+        status: "passed",
         children: [
           { type: "test", title: "parametarized: 1", status: "passed" },
           { type: "test", title: "parametarized: 2", status: "passed" },
@@ -65,6 +70,7 @@ const testFiles: TestFile[] = [
       {
         type: "describe",
         describe: "describe depth 1",
+        status: "passed",
         children: [
           { type: "test", title: "test 1", status: "passed" },
           { type: "test", title: "test 2", status: "passed" },

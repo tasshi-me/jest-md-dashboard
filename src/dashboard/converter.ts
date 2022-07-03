@@ -3,6 +3,7 @@ import path from "path";
 import {
   AggregatedResult,
   AssertionResult,
+  Status,
   TestResult,
 } from "@jest/test-result";
 
@@ -104,11 +105,26 @@ const convertChildren = (
       lastIndex > 0
         ? results.slice(index, index + lastIndex)
         : results.slice(index);
+    const _children = convertChildren(testsInThisDescribe, currentLevel + 1);
+    let status: Status = "passed";
+    if (_children.some((child) => child.status === "failed")) {
+      status = "failed";
+    } else if (_children.some((child) => child.status === "pending")) {
+      status = "pending";
+    } else if (_children.every((child) => child.status === "skipped")) {
+      status = "skipped";
+    } else if (_children.every((child) => child.status === "todo")) {
+      status = "todo";
+    } else if (_children.every((child) => child.status === "disabled")) {
+      status = "disabled";
+    }
+
     children.push({
       type: "describe",
       describe: result.ancestorTitles[currentLevel],
       // TODO: need a recursion limit
-      children: convertChildren(testsInThisDescribe, currentLevel + 1),
+      status,
+      children: _children,
     });
     index = lastIndex > 0 ? index + lastIndex - 1 : results.length;
   }

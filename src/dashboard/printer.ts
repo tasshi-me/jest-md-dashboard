@@ -56,7 +56,9 @@ const printChildren = (
         )} ${child.title}\n`;
         break;
       case "describe":
-        resultText += `${"  ".repeat(currentLevel)}- ${child.describe}\n`;
+        resultText += `${"  ".repeat(currentLevel)}- ${printStatus(
+          child.status
+        )} ${child.describe}\n`;
         resultText += printChildren(child.children, currentLevel + 1);
         break;
       default:

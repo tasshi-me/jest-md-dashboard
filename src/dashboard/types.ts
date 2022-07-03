@@ -34,6 +34,7 @@ export type TestFile = {
 export type Describe = {
   type: "describe";
   describe: string;
+  status: Status;
   children: Array<Describe | Test>;
 };
 
