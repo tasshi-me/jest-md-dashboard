@@ -82,15 +82,39 @@ jest --config=./jest.print-dashboard.js
 
 ## Options
 
-| Name                   | Type                | Default                     | Description                                                                                                                 |
-| ---------------------- | ------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `title`                | `string`            | `"Test Dashboard"`          | The title of a dashboard.<br>It will be printed at the top of the markdown output.                                          |
-| `outputPath`           | `string`            | `test-dashboard.md`         | The file path to output dashboard. If you want to output to stdout, specify `-`.                                            |
-| `permalink`            | `object` or `false` | `{(followings)}`            | Override permalink generation.<br>Set `false` to disable generation.                                                        |
-| `permalink.hostname`   | `string`            | `"github.com"`              | The hostname of permalink.<br>Specify if you using services other than github.com.<br>e.g. GitHub Enterprise or GitLab      |
-| `permalink.repository` | `string`            | `${GITHUB_REPOSITORY}`      | The repository name of permalink. (`"<owner>/<repo>"`)                                                                      |
-| `permalink.commit`     | `string`            | `${GITHUB_SHA}` ?? `"main"` | The commit hash of permalink.<br>You can also specify branch or tag.                                                        |
-| `permalink.pattern`    | `string`            | see description             | The template pattern of permalink.<br>Absence defaults to `"https://${hostname}/${repository}/blob/${commit}/${filePath}"`. |
+| Name               | Type     | Default             | Description                                                                                                                                                                                                                                             |
+| ------------------ | -------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`            | `string` | `"Test Dashboard"`  | The title of a dashboard.<br>It will be printed at the top of the markdown output.                                                                                                                                                                      |
+| `outputPath`       | `string` | `test-dashboard.md` | The file path to output dashboard. If you want to output to stdout, specify `-`.                                                                                                                                                                        |
+| `permalinkBaseUrl` | `string` | `undefined`         | Override baseUrl of permalink. Specify if generated permalinks are incorrect.<br>URL must have trailing slash.<br>e.g. `https://github.com/mshrtsr/jest-md-dashboard/blob/` <br>See [Permalink generation](#Permalink generation) for more information. |
+
+## Permalink generation
+
+jest-md-dashboard generates permalink to test files on GitHub (or other services) by default.
+
+jest-md-dashboard tries to find git information from the following sources.
+
+1. `permalinkBaseUrl` option
+2. (on GitHub Actions) environment variables
+3. (in git repository) git config
+
+### `permalinkBaseUrl` option
+
+If `permalinkBaseUrl` is specified on jest config, jest-md-dashboard generates permalink using it.
+
+### on GitHub Actions
+
+If you run jest on GitHub Actions, jest-md-dashboard generates permalink using the following environment variables.
+
+- `$GITHUB_ACTIONS`
+- `$GITHUB_SERVER_URL`
+- `$GITHUB_REPOSITORY`
+- `$GITHUB_SHA`
+- `$GITHUB_WORKSPACE`
+
+### in git repository
+
+If jest runs in a git repository, jest-md-dashboard generates permalink using git config of the local repository.
 
 ## Contribution
 
