@@ -1,3 +1,5 @@
+import { Status } from "@jest/test-result";
+
 export type Dashboard = {
   title: string;
   summary: Summary;
@@ -22,6 +24,10 @@ export type Summary = {
 export type TestFile = {
   filePath: string;
   permalink?: string;
+  numPassingTests: number;
+  numFailingTests: number;
+  numTodoTests: number;
+  duration: number;
   children: Array<Describe | Test>;
 };
 
@@ -34,5 +40,5 @@ export type Describe = {
 export type Test = {
   type: "test";
   title: string;
-  status: string;
+  status: Status;
 };

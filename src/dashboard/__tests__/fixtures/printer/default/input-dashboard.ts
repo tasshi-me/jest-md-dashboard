@@ -1,11 +1,15 @@
-// @ts-ignore
-import type { Dashboard, TestFile } from "../../../../types";
-// @ts-ignore
-import { testDuration, testStartTime } from "../../../helpers/datetime";
+import type { Dashboard, TestFile } from "../../../../types.js";
+import { testDuration, testStartTime } from "../../../helpers/datetime.js";
 
 const testFiles: TestFile[] = [
   {
     filePath: "src/__tests__/sample-1.test.ts",
+    permalink:
+      "https://github.com/mshrtsr/jest-md-dashboard/blob/main/src/__tests__/sample-1.test.ts",
+    numPassingTests: 13,
+    numFailingTests: 0,
+    numTodoTests: 1,
+    duration: 0.513,
     children: [
       {
         type: "describe",
@@ -52,11 +56,15 @@ const testFiles: TestFile[] = [
         ],
       },
     ],
-    permalink:
-      "https://github.com/mshrtsr/jest-md-dashboard/blob/main/src/__tests__/sample-1.test.ts",
   },
   {
     filePath: "src/__tests__/sample-2.test.ts",
+    permalink:
+      "https://github.com/mshrtsr/jest-md-dashboard/blob/main/src/__tests__/sample-2.test.ts",
+    numPassingTests: 4,
+    numFailingTests: 0,
+    numTodoTests: 0,
+    duration: 3.869,
     children: [
       {
         type: "describe",
@@ -69,8 +77,6 @@ const testFiles: TestFile[] = [
         ],
       },
     ],
-    permalink:
-      "https://github.com/mshrtsr/jest-md-dashboard/blob/main/src/__tests__/sample-2.test.ts",
   },
 ];
 

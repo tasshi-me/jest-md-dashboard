@@ -29,8 +29,14 @@ const printTestFiles = (testFiles: TestFile[]): string => {
   let resultText = "";
   for (const file of testFiles) {
     const link = file.permalink ? ` [[link](${file.permalink})]` : "";
-    resultText += `## ${file.filePath}${link}\n`;
+    resultText += `## ${file.filePath}${link}\n\n`;
+
+    resultText += `${file.numPassingTests} passed, ${file.numFailingTests} failed, ${file.numTodoTests} todo, done in ${file.duration} s\n`;
+    resultText += "\n";
+
     resultText += printChildren(file.children);
+
+    resultText += "\n";
   }
   return resultText;
 };

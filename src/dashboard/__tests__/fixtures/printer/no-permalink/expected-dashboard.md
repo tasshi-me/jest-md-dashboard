@@ -11,6 +11,9 @@
 |Tests|67|43|13|45|
 
 ## src/__tests__/sample-1.test.ts
+
+13 passed, 0 failed, 1 todo, done in 0.513 s
+
 - describe depth 1
   - test 1
   - test 2
@@ -30,9 +33,14 @@
   - parametarized: 2
   - parametarized: 1
   - parametarized: 2
+
 ## src/__tests__/sample-2.test.ts
+
+4 passed, 0 failed, 0 todo, done in 3.869 s
+
 - describe depth 1
   - test 1
   - test 2
   - test 3
   - test 4
+

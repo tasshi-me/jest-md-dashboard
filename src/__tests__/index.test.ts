@@ -30,7 +30,12 @@ describe("jest-md-dashboard", () => {
     expect(result.error).toBeUndefined();
 
     const rawOutput = await fs.readFile(outputPath, "utf-8");
-    const output = rawOutput.replace(/\|.+\|\d(\.\d+)? s\|/, "|0|0 s|");
+    const output = rawOutput
+      .replace(/\|.+\|\d(\.\d+)? s\|/, "|0|0 s|")
+      .replace(
+        /\d+ passed, \d+ failed, \d+ todo, done in \d(\.\d+)? s/g,
+        "0 passed, 0 failed, 0 todo, done in 0 s"
+      );
     expect(output).toBe(await fs.readFile(expectedPath, "utf-8"));
   });
 });

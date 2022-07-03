@@ -59,8 +59,21 @@ const convertTestFile = (
   const permalink: string | undefined = options.permalinkBaseUrl
     ? options.permalinkBaseUrl + filePath
     : undefined;
+  const duration = result.perfStats.runtime / 1000;
+  const numPassingTests = result.numPassingTests;
+  const numFailingTests = result.numFailingTests;
+  const numTodoTests = result.numTodoTests;
+
   const children = convertChildren(result.testResults);
-  return { filePath, children, permalink };
+  return {
+    filePath,
+    permalink,
+    numPassingTests,
+    numFailingTests,
+    numTodoTests,
+    duration,
+    children,
+  };
 };
 
 const convertChildren = (
@@ -77,7 +90,7 @@ const convertChildren = (
         type: "test",
         title: result.title,
         status: result.status,
-      } as Test);
+      });
       continue;
     }
 
