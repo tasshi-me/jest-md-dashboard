@@ -1,4 +1,6 @@
-import { buildPermalink } from "../../options.js";
+import { jest } from "@jest/globals";
+
+import { buildPermalinkBaseUrl } from "../../options.js";
 import { convertResultsToDashboard } from "../converter.js";
 
 import { dashboard as expected } from "./fixtures/converter/expected-dashboard.js";
@@ -10,11 +12,8 @@ delete process.env.GITHUB_SHA;
 
 const baseOptions = {
   title: "My Dashboard",
-  rootPath: "/path/to/rootDir/",
-  permalink: buildPermalink({
-    repository: "mshrtsr/jest-md-dashboard",
-    commit: "main",
-  }),
+  jestRootDir: "/path/to/rootDir/",
+  permalinkBaseUrl: "https://github.com/mshrtsr/jest-md-dashboard/blob/main/",
 };
 
 describe("convertResultsToDashboard", () => {
@@ -25,7 +24,7 @@ describe("convertResultsToDashboard", () => {
   afterEach(() => {
     jest.useRealTimers();
   });
-  it("should convert results to dashboard", function () {
+  it("should convert results to dashboard", () => {
     const actual = convertResultsToDashboard(results, { ...baseOptions });
     actual.summary.totalRunTime = testDuration;
     expect(actual).toStrictEqual(expected);

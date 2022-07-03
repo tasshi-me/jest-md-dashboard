@@ -8,26 +8,19 @@ import {
 
 import { Dashboard, Summary, Describe, Test, TestFile } from "./types.js";
 
-export type Permalink = {
-  hostname: string;
-  repository: string;
-  commit: string;
-  pattern: string;
-};
-
 export const convertResultsToDashboard = (
   results: AggregatedResult,
   options: {
     title: string;
-    rootPath: string;
-    permalink?: Permalink;
+    jestRootDir: string;
+    permalinkBaseUrl?: string;
   }
 ): Dashboard => {
   const summary = convertSummary(results);
   const testFiles: TestFile[] = results.testResults.map((resultByFile) =>
     convertTestFile(resultByFile, {
-      rootPath: options.rootPath,
-      permalink: options.permalink,
+      jestRootDir: options.jestRootDir,
+      permalinkBaseUrl: options.permalinkBaseUrl,
     })
   );
   return {
@@ -57,19 +50,15 @@ const convertSummary = (results: AggregatedResult): Summary => {
 
 const convertTestFile = (
   result: TestResult,
-  options: { rootPath: string; permalink?: Permalink }
-): TestFile => {
-  const filePath = path.relative(options.rootPath, result.testFilePath);
-  let permalink: string | undefined;
-  if (options.permalink) {
-    permalink = options.permalink.pattern
-      /* eslint-disable no-template-curly-in-string */
-      .replace("${hostname}", options.permalink.hostname)
-      .replace("${repository}", options.permalink.repository)
-      .replace("${commit}", options.permalink.commit)
-      .replace("${filePath}", filePath);
-    /* eslint-enable no-template-curly-in-string */
+  options: {
+    jestRootDir: string;
+    permalinkBaseUrl?: string;
   }
+): TestFile => {
+  const filePath = path.relative(options.jestRootDir, result.testFilePath);
+  const permalink: string | undefined = options.permalinkBaseUrl
+    ? options.permalinkBaseUrl + filePath
+    : undefined;
   const children = convertChildren(result.testResults);
   return { filePath, children, permalink };
 };

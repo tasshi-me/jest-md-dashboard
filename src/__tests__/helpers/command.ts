@@ -6,7 +6,15 @@ export const runJest = (configPath: string, env?: object) => {
   return child_process.spawnSync(jestCommand, [`--config=${configPath}`], {
     env: {
       ...process.env,
-      ...(env ? env : { GITHUB_REPOSITORY: undefined, GITHUB_SHA: undefined }),
+      ...(env
+        ? env
+        : {
+            GITHUB_ACTIONS: undefined,
+            GITHUB_SERVER_URL: undefined,
+            GITHUB_REPOSITORY: undefined,
+            GITHUB_SHA: undefined,
+            GITHUB_WORKSPACE: undefined,
+          }),
     },
   });
 };
