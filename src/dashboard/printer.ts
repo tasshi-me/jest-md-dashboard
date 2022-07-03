@@ -1,3 +1,5 @@
+import { Status } from "@jest/test-result";
+
 import { Dashboard, Describe, Summary, Test, TestFile } from "./types.js";
 
 export const printDashBoard = (dashboard: Dashboard): string => {
@@ -49,7 +51,9 @@ const printChildren = (
   for (const child of children) {
     switch (child.type) {
       case "test":
-        resultText += `${"  ".repeat(currentLevel)}- ${child.title}\n`;
+        resultText += `${"  ".repeat(currentLevel)}- ${printStatus(
+          child.status
+        )} ${child.title}\n`;
         break;
       case "describe":
         resultText += `${"  ".repeat(currentLevel)}- ${child.describe}\n`;
@@ -60,4 +64,23 @@ const printChildren = (
     }
   }
   return resultText;
+};
+
+const printStatus = (status: Status): string => {
+  switch (status) {
+    case "passed":
+      return ":white_check_mark:";
+    case "failed":
+      return ":x:";
+    case "skipped":
+      return ":fast_forward:";
+    case "pending":
+      return ":running:";
+    case "todo":
+      return ":construction:";
+    case "disabled":
+      return ":no_entry_sign:";
+    default:
+      throw new Error("Illegal state");
+  }
 };
