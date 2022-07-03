@@ -24,3 +24,4 @@ jobs:
       - run: yarn build
       - run: yarn test:generate-dashboard
       - run: gh issue edit ${{ env.ISSUE_NUMBER }} --body-file ./test-dashboard.md
+        if: always()
