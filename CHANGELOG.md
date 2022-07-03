@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.5.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.4.0...jest-md-dashboard-v0.5.0) (2022-07-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove `permalink` option and add `permalinkBaseUrl` (#37)
+* output to file by default (#34)
+
+### Features
+
+* output to file by default ([#34](https://github.com/mshrtsr/jest-md-dashboard/issues/34)) ([ed723bf](https://github.com/mshrtsr/jest-md-dashboard/commit/ed723bff813227b43290c2b15f2a6b3160f3054d))
+* remove `permalink` option and add `permalinkBaseUrl` ([#37](https://github.com/mshrtsr/jest-md-dashboard/issues/37)) ([a9fdceb](https://github.com/mshrtsr/jest-md-dashboard/commit/a9fdceb40fd76d12287e9c7181bafa6493f64684))
+
+
+### Bug Fixes
+
+* change default dashboard title ([dc5d2cd](https://github.com/mshrtsr/jest-md-dashboard/commit/dc5d2cd47c0d9a4b30baf1cb37d3ae8c0191f066))
+
 ## [0.4.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.3.1...jest-md-dashboard-v0.4.0) (2022-06-29)
 
 
