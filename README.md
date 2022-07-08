@@ -9,11 +9,16 @@ Generating a pretty Markdown dashboard for Jest
 
 ## Table of Contents
 
+- [Example](#Example)
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Options](#Options)
 - [Contribution](#Contribution)
 - [License](#License)
+
+## Example
+
+See https://github.com/mshrtsr/jest-md-dashboard/issues/20
 
 ## Installation
 
