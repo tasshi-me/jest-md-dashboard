@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.6.0...jest-md-dashboard-v0.6.1) (2022-07-08)
+
+
+### Documentation
+
+* add example to README.md ([e2cd19e](https://github.com/mshrtsr/jest-md-dashboard/commit/e2cd19e13d89c6b54efe17b5c3e058f02052ce15))
+
 ## [0.6.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.5.0...jest-md-dashboard-v0.6.0) (2022-07-03)
 
 
