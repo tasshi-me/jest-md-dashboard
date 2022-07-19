@@ -5,6 +5,9 @@ coverage
 # Ignore all HTML files:
 *.html
 
+# Ignore issue template
+.github/ISSUE_TEMPLATE
+
 # Ignore CHANGELOG.md (because it is auto generated)
 CHANGELOG.md
 
