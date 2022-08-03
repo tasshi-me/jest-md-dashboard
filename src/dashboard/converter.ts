@@ -18,6 +18,9 @@ export const convertResultsToDashboard = (
   }
 ): Dashboard => {
   const summary = convertSummary(results);
+  results.testResults.sort((a, b) =>
+    b.testFilePath.localeCompare(a.testFilePath)
+  );
   const testFiles: TestFile[] = results.testResults.map((resultByFile) =>
     convertTestFile(resultByFile, {
       jestRootDir: options.jestRootDir,
