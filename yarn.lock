@@ -5318,10 +5318,10 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
-release-please@^13.19.7:
-  version "13.19.7"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-13.19.7.tgz#055fb697ec48b9c159c316d0118448cc5f2f4894"
-  integrity sha512-UOOyeqlXCFH0j90Uw13GL/DU1Zdjcu2/uRWN78sW50/+lkbTwaBxmSkS8YKRnRUmL5BEvMpK9dheJle1Hwy++A==
+release-please@^13.19.8:
+  version "13.19.8"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-13.19.8.tgz#b15a110c05e67cf3a2cde03251e04e75ac7195b8"
+  integrity sha512-XBVjFhKi8ItnLfmDHbDhjC1P8nQMwDOLawAR9cnb56LIPa/o9uIG4C/tYC6zxIA7HBvz/xNlf82s3tAq1SWgDA==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@iarna/toml" "^2.2.5"
