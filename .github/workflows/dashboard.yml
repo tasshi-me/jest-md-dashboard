@@ -14,12 +14,10 @@ jobs:
     steps:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v3
-      - uses: nodenv/actions/node-version@main
-        id: nodenv
-      - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "${{ steps.nodenv.outputs.node-version }}"
+          node-version-file: '.node-version'
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn test:generate-dashboard
