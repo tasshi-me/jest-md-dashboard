@@ -3,28 +3,6 @@ import { testDuration, testStartTime } from "../../helpers/datetime.js";
 
 const testFiles: TestFile[] = [
   {
-    filePath: "src/__tests__/sample-2.test.ts",
-    permalink:
-      "https://github.com/mshrtsr/jest-md-dashboard/blob/main/src/__tests__/sample-2.test.ts",
-    numPassingTests: 4,
-    numFailingTests: 0,
-    numTodoTests: 0,
-    duration: 3.869,
-    children: [
-      {
-        type: "describe",
-        describe: "describe depth 1",
-        status: "passed",
-        children: [
-          { type: "test", title: "test 1", status: "passed" },
-          { type: "test", title: "test 2", status: "passed" },
-          { type: "test", title: "test 3", status: "passed" },
-          { type: "test", title: "test 4", status: "passed" },
-        ],
-      },
-    ],
-  },
-  {
     filePath: "src/__tests__/sample-1.test.ts",
     permalink:
       "https://github.com/mshrtsr/jest-md-dashboard/blob/main/src/__tests__/sample-1.test.ts",
@@ -83,7 +61,29 @@ const testFiles: TestFile[] = [
         ],
       },
     ],
-  }
+  },
+  {
+    filePath: "src/__tests__/sample-2.test.ts",
+    permalink:
+      "https://github.com/mshrtsr/jest-md-dashboard/blob/main/src/__tests__/sample-2.test.ts",
+    numPassingTests: 4,
+    numFailingTests: 0,
+    numTodoTests: 0,
+    duration: 3.869,
+    children: [
+      {
+        type: "describe",
+        describe: "describe depth 1",
+        status: "passed",
+        children: [
+          { type: "test", title: "test 1", status: "passed" },
+          { type: "test", title: "test 2", status: "passed" },
+          { type: "test", title: "test 3", status: "passed" },
+          { type: "test", title: "test 4", status: "passed" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const dashboard: Dashboard = {
