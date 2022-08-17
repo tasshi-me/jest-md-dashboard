@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.7.0](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.6.1...jest-md-dashboard-v0.7.0) (2022-08-16)
+
+
+### Features
+
+* sort test results alphabetically by file path ([#68](https://github.com/mshrtsr/jest-md-dashboard/issues/68)) ([051e9e2](https://github.com/mshrtsr/jest-md-dashboard/commit/051e9e2689ffe4cd5009fed3b23a2d09ad88e455))
+
+
+### Bug Fixes
+
+* **deps:** update dependency isomorphic-git to ^1.19.1 ([#58](https://github.com/mshrtsr/jest-md-dashboard/issues/58)) ([9ce3564](https://github.com/mshrtsr/jest-md-dashboard/commit/9ce35646c5c0e246ee0d26ba97a1b04c0f95aa63))
+* make sort order of test result ascending ([#83](https://github.com/mshrtsr/jest-md-dashboard/issues/83)) ([cbb5475](https://github.com/mshrtsr/jest-md-dashboard/commit/cbb547511555aa6fcce6bdf89a68f41e87d773bd))
+
 ## [0.6.1](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.6.0...jest-md-dashboard-v0.6.1) (2022-07-08)
 
 
