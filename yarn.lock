@@ -1446,6 +1446,14 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@google-automations/git-file-utils@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@google-automations/git-file-utils/-/git-file-utils-1.2.0.tgz#616bbcff928930827e0a99cd0a50f1e4832d26d0"
+  integrity sha512-tHkJQznc9uSBlOoss1vEwTZz/0uM3xLKFapfRX0u2gLTLciCktIsldhbS2GUVWPSvNUxcDgIr9n6iOqAunsQqg==
+  dependencies:
+    "@octokit/rest" "19.0.4"
+    minimatch "^5.1.0"
+
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.4.tgz#01e7366e57d2ad104feea63e72248f22015c520c"
@@ -1935,7 +1943,7 @@
     node-fetch "^2.6.7"
     universal-user-agent "^6.0.0"
 
-"@octokit/rest@^19.0.0":
+"@octokit/rest@19.0.4", "@octokit/rest@^19.0.0":
   version "19.0.4"
   resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-19.0.4.tgz#fd8bed1cefffa486e9ae46a9dc608ce81bcfcbdd"
   integrity sha512-LwG668+6lE8zlSYOfwPj4FxWdv/qFXYBpv79TWIQEpBLKA9D/IMcWsF/U9RGpA3YqMVDiTxpgVpEW3zTFfPFTA==
@@ -2537,6 +2545,13 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+brace-expansion@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-2.0.1.tgz#1edc459e0f0c548486ecf9fc99f2221364b9a0ae"
+  integrity sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==
+  dependencies:
+    balanced-match "^1.0.0"
+
 braces@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/braces/-/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
@@ -2664,10 +2679,10 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha512-RpAVKQA5T63xEj6/giIbUEtZwJ4UFIc3ZtvEkiaUERylqe8xb5IvqcgOurZLahv93CLKfxcw5YI+DZcUBRyLXA==
 
-code-suggester@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/code-suggester/-/code-suggester-4.0.1.tgz#8e620337ed345b5c1eeab426b3f248624accb2a3"
-  integrity sha512-qIC7EeCBY85WTU16N/QZCZd79bWMaZuSJc+xVl45E7i8wcxm0Mx9bqcEyeXdHk3a8RjlDQNu/ZgfNZ7NkVc2IQ==
+code-suggester@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/code-suggester/-/code-suggester-4.1.0.tgz#0c2e30173d6453bd8fcbdec94003fae3895998b3"
+  integrity sha512-l3V0QvXL//d78Kxuanlb89r6AT6G3ZM+qmwvHw3NyP7SjKkt+6LZcgEC6yH5T8hwZGSfz/9dXSek0cMn9tMqpw==
   dependencies:
     "@octokit/rest" "^19.0.0"
     "@types/yargs" "^16.0.0"
@@ -4733,6 +4748,13 @@ minimatch@^3.0.4, minimatch@^3.1.1, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
+minimatch@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.0.tgz#1717b464f4971b144f6aabe8f2d0b8e4511e09c7"
+  integrity sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==
+  dependencies:
+    brace-expansion "^2.0.1"
+
 minimist-options@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/minimist-options/-/minimist-options-4.1.0.tgz#c0655713c53a8a2ebd77ffa247d342c40f010619"
@@ -5416,12 +5438,13 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
-release-please@^14.0.0:
-  version "14.0.0"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.0.0.tgz#0acc62769366fd0dd8c7a7aff57da852bd8d40a0"
-  integrity sha512-k1KOMc98I/zuVX7SDRX0GbG6rOYDlBgQXdNh3SjtTT6p0jg9fjWhCmdWs5hqePj9I2QLx9oEI2b1J2U1GlWPfQ==
+release-please@^14.5.0:
+  version "14.5.0"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.5.0.tgz#219ac39156ccb4763f1dc9a35a360cbcc55a6e70"
+  integrity sha512-yJ36sJ4cDgjB4Zic4aXfhImqZC3wOJfRwLofpexdblM7ohy+13E1BFBzipWtWBh19e7UTnQTQVHIGBx9oLkGKg==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
+    "@google-automations/git-file-utils" "^1.2.0"
     "@iarna/toml" "^2.2.5"
     "@lerna/collect-updates" "^4.0.0"
     "@lerna/package" "^4.0.0"
@@ -5434,7 +5457,7 @@ release-please@^14.0.0:
     "@types/npm-package-arg" "^6.1.0"
     "@xmldom/xmldom" "^0.8.2"
     chalk "^4.0.0"
-    code-suggester "^4.0.0"
+    code-suggester "^4.1.0"
     conventional-changelog-conventionalcommits "^5.0.0"
     conventional-changelog-writer "^5.0.0"
     conventional-commits-filter "^2.0.2"
