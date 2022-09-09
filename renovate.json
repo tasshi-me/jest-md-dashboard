@@ -1,3 +1,4 @@
 {
-  "extends": ["github>mshrtsr/renovate-config"]
+  "extends": ["github>mshrtsr/renovate-config"],
+  "platformAutomerge": true
 }
