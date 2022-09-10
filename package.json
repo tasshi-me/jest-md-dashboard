@@ -46,7 +46,7 @@
     "@cybozu/eslint-config": "^17.0.3",
     "@jest/globals": "^29.0.3",
     "@jest/reporters": "^29.0.2",
-    "@jest/test-result": "^29.0.2",
+    "@jest/test-result": "^29.0.3",
     "@jest/types": "^29.0.2",
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^29.0.0",

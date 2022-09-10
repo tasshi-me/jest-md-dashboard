@@ -1518,6 +1518,18 @@
     jest-util "^29.0.2"
     slash "^3.0.0"
 
+"@jest/console@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/console/-/console-29.0.3.tgz#a222ab87e399317a89db88a58eaec289519e807a"
+  integrity sha512-cGg0r+klVHSYnfE977S9wmpuQ9L+iYuYgL+5bPXiUlUynLLYunRxswEmhBzvrSKGof5AKiHuTTmUKAqRcDY9dg==
+  dependencies:
+    "@jest/types" "^29.0.3"
+    "@types/node" "*"
+    chalk "^4.0.0"
+    jest-message-util "^29.0.3"
+    jest-util "^29.0.3"
+    slash "^3.0.0"
+
 "@jest/core@^29.0.2":
   version "29.0.2"
   resolved "https://registry.yarnpkg.com/@jest/core/-/core-29.0.2.tgz#7bf47ff6cd882678c47fbdea562bdf1ff03b6d33"
@@ -1700,6 +1712,16 @@
   dependencies:
     "@jest/console" "^29.0.2"
     "@jest/types" "^29.0.2"
+    "@types/istanbul-lib-coverage" "^2.0.0"
+    collect-v8-coverage "^1.0.0"
+
+"@jest/test-result@^29.0.3":
+  version "29.0.3"
+  resolved "https://registry.yarnpkg.com/@jest/test-result/-/test-result-29.0.3.tgz#b03d8ef4c58be84cd5d5d3b24d4b4c8cabbf2746"
+  integrity sha512-vViVnQjCgTmbhDKEonKJPtcFe9G/CJO4/Np4XwYJah+lF2oI7KKeRp8t1dFvv44wN2NdbDb/qC6pi++Vpp0Dlg==
+  dependencies:
+    "@jest/console" "^29.0.3"
+    "@jest/types" "^29.0.3"
     "@types/istanbul-lib-coverage" "^2.0.0"
     collect-v8-coverage "^1.0.0"
 
