@@ -1577,6 +1577,18 @@
     jest-util "^29.1.0"
     slash "^3.0.0"
 
+"@jest/console@^29.1.2":
+  version "29.1.2"
+  resolved "https://registry.yarnpkg.com/@jest/console/-/console-29.1.2.tgz#0ae975a70004696f8320490fcaa1a4152f7b62e4"
+  integrity sha512-ujEBCcYs82BTmRxqfHMQggSlkUZP63AE5YEaTPj7eFyJOzukkTorstOUC7L6nE3w5SYadGVAnTsQ/ZjTGL0qYQ==
+  dependencies:
+    "@jest/types" "^29.1.2"
+    "@types/node" "*"
+    chalk "^4.0.0"
+    jest-message-util "^29.1.2"
+    jest-util "^29.1.2"
+    slash "^3.0.0"
+
 "@jest/core@^29.1.1":
   version "29.1.1"
   resolved "https://registry.yarnpkg.com/@jest/core/-/core-29.1.1.tgz#a7e5f86dd29fa9da1ca84752237735dc7bcda3d8"
@@ -1743,6 +1755,37 @@
     terminal-link "^2.0.0"
     v8-to-istanbul "^9.0.1"
 
+"@jest/reporters@^29.1.2":
+  version "29.1.2"
+  resolved "https://registry.yarnpkg.com/@jest/reporters/-/reporters-29.1.2.tgz#5520898ed0a4ecf69d8b671e1dc8465d0acdfa6e"
+  integrity sha512-X4fiwwyxy9mnfpxL0g9DD0KcTmEIqP0jUdnc2cfa9riHy+I6Gwwp5vOZiwyg0vZxfSDxrOlK9S4+340W4d+DAA==
+  dependencies:
+    "@bcoe/v8-coverage" "^0.2.3"
+    "@jest/console" "^29.1.2"
+    "@jest/test-result" "^29.1.2"
+    "@jest/transform" "^29.1.2"
+    "@jest/types" "^29.1.2"
+    "@jridgewell/trace-mapping" "^0.3.15"
+    "@types/node" "*"
+    chalk "^4.0.0"
+    collect-v8-coverage "^1.0.0"
+    exit "^0.1.2"
+    glob "^7.1.3"
+    graceful-fs "^4.2.9"
+    istanbul-lib-coverage "^3.0.0"
+    istanbul-lib-instrument "^5.1.0"
+    istanbul-lib-report "^3.0.0"
+    istanbul-lib-source-maps "^4.0.0"
+    istanbul-reports "^3.1.3"
+    jest-message-util "^29.1.2"
+    jest-util "^29.1.2"
+    jest-worker "^29.1.2"
+    slash "^3.0.0"
+    string-length "^4.0.1"
+    strip-ansi "^6.0.0"
+    terminal-link "^2.0.0"
+    v8-to-istanbul "^9.0.1"
+
 "@jest/schemas@^29.0.0":
   version "29.0.0"
   resolved "https://registry.yarnpkg.com/@jest/schemas/-/schemas-29.0.0.tgz#5f47f5994dd4ef067fb7b4188ceac45f77fe952a"
@@ -1766,6 +1809,16 @@
   dependencies:
     "@jest/console" "^29.1.0"
     "@jest/types" "^29.1.0"
+    "@types/istanbul-lib-coverage" "^2.0.0"
+    collect-v8-coverage "^1.0.0"
+
+"@jest/test-result@^29.1.2":
+  version "29.1.2"
+  resolved "https://registry.yarnpkg.com/@jest/test-result/-/test-result-29.1.2.tgz#6a8d006eb2b31ce0287d1fc10d12b8ff8504f3c8"
+  integrity sha512-jjYYjjumCJjH9hHCoMhA8PCl1OxNeGgAoZ7yuGYILRJX9NjgzTN0pCT5qAoYR4jfOP8htIByvAlz9vfNSSBoVg==
+  dependencies:
+    "@jest/console" "^29.1.2"
+    "@jest/types" "^29.1.2"
     "@types/istanbul-lib-coverage" "^2.0.0"
     collect-v8-coverage "^1.0.0"
 
