@@ -20,7 +20,7 @@
   "type": "module",
   "exports": "./lib/index.js",
   "engines": {
-    "node": ">=v14.20.1"
+    "node": ">=v16.18.0"
   },
   "scripts": {
     "prebuild": "run-s clean",
