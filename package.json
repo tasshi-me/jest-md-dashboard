@@ -45,7 +45,7 @@
     "@babel/preset-typescript": "^7.18.6",
     "@cybozu/eslint-config": "^17.0.3",
     "@jest/globals": "^29.2.1",
-    "@jest/reporters": "^29.2.0",
+    "@jest/reporters": "^29.2.1",
     "@jest/test-result": "^29.2.0",
     "@jest/types": "^29.2.0",
     "@tsconfig/recommended": "^1.0.1",
