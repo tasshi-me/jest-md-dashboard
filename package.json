@@ -51,7 +51,7 @@
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^29.2.0",
     "@typescript-eslint/parser": "^5.40.1",
-    "babel-jest": "^29.2.0",
+    "babel-jest": "^29.2.1",
     "eslint": "^8.25.0",
     "eslint-import-resolver-typescript": "^3.5.1",
     "eslint-plugin-import": "^2.26.0",
