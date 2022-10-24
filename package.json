@@ -50,7 +50,7 @@
     "@jest/types": "^29.2.1",
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^29.2.0",
-    "@typescript-eslint/parser": "^5.40.1",
+    "@typescript-eslint/parser": "^5.41.0",
     "babel-jest": "^29.2.1",
     "eslint": "^8.26.0",
     "eslint-import-resolver-typescript": "^3.5.2",
