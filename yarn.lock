@@ -6075,10 +6075,10 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
-release-please@^14.14.0:
-  version "14.14.0"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.14.0.tgz#64baccd551c2db5d49040a7530f9ec9fa66e5faf"
-  integrity sha512-AeSSdOb+YgEYCr4TTkHBE1VLG4XuYuvsiLWgj+fwnqsw3y7A3EbIk8mk0pNPtW2gkRHc7UUBokbA9yWrvv8McQ==
+release-please@^14.15.0:
+  version "14.15.0"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.15.0.tgz#1758820e7387f1aded673d174d2054b6ddef29ac"
+  integrity sha512-sXQCxmqTvvXlrl+QYsuLW0Ddp62Ze357NGsAape3iZPEpbsWXJk3OtG8VUk7y/Kx7eUpgcpmozRqIEA+lYAPzQ==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^1.2.0"
@@ -6108,7 +6108,7 @@ release-please@^14.14.0:
     node-html-parser "^6.0.0"
     parse-github-repo-url "^1.4.1"
     semver "^7.0.0"
-    type-fest "^2.0.0"
+    type-fest "^3.0.0"
     typescript "^4.6.4"
     unist-util-visit "^2.0.3"
     unist-util-visit-parents "^3.1.1"
@@ -6675,10 +6675,10 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-type-fest@^2.0.0:
-  version "2.13.1"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.13.1.tgz#621c84220df0e01a8469002594fc005714f0cfba"
-  integrity sha512-hXYyrPFwETT2swFLHeoKtJrvSF/ftG/sA15/8nGaLuaDGfVAaq8DYFpu4yOyV4tzp082WqnTEoMsm3flKMI2FQ==
+type-fest@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.1.0.tgz#157b74044d9c27fd796b9c6aa46eae6658b1e9b8"
+  integrity sha512-StmrZmK3eD9mDF9Vt7UhqthrDSk66O9iYl5t5a0TSoVkHjl0XZx/xuc/BRz4urAXXGHOY5OLsE0RdJFIApSFmw==
 
 typescript@^4.6.4:
   version "4.7.4"
