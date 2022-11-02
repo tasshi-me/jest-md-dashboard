@@ -2501,10 +2501,10 @@
     "@typescript-eslint/types" "5.42.0"
     eslint-visitor-keys "^3.3.0"
 
-"@xmldom/xmldom@^0.8.2":
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.8.2.tgz#b695ff674e8216efa632a3d36ad51ae9843380c0"
-  integrity sha512-+R0juSseERyoPvnBQ/cZih6bpF7IpCXlWbHRoCRzYzqpz6gWHOgf8o4MOEf6KBVuOyqU+gCNLkCWVIJAro8XyQ==
+"@xmldom/xmldom@^0.8.4":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.8.5.tgz#7f4b797cfda39355b512b4cfcc66b49b5d93d5f3"
+  integrity sha512-0dpjDLeCXYThL2YhqZcd/spuwoH+dmnFoND9ZxZkAYxp1IJUB2GP16ow2MJRsjVxy8j1Qv8BJRmN5GKnbDKCmQ==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -6075,10 +6075,10 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
-release-please@^14.15.2:
-  version "14.15.2"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.15.2.tgz#0128f3d780bc5290cc8fc2d97dc10f4664d49824"
-  integrity sha512-oz/gi7SVIuO4g4AlWbyazxYsrtAL7Fbr6RGUt8IT6/kA/V06jBMaPou2+PPqFJitge7hC/zj+b0yBQ0rnOYJJA==
+release-please@^14.15.3:
+  version "14.15.3"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.15.3.tgz#fb61ed12c3482400e759d23b33828ff993d8c924"
+  integrity sha512-7QmBflI/EAlNAJtC2pyejlsBeaAg4CfA9aIrExd+FZPdTfmKKJ9uToLInh5KubqhA2O+EnhGERXiN4LWtHfUYA==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^1.2.0"
@@ -6092,7 +6092,7 @@ release-please@^14.15.2:
     "@octokit/request-error" "^3.0.0"
     "@octokit/rest" "^19.0.0"
     "@types/npm-package-arg" "^6.1.0"
-    "@xmldom/xmldom" "^0.8.2"
+    "@xmldom/xmldom" "^0.8.4"
     chalk "^4.0.0"
     code-suggester "^4.1.0"
     conventional-changelog-conventionalcommits "^5.0.0"
