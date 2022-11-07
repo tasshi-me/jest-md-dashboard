@@ -2553,6 +2553,19 @@ babel-jest@^29.2.2:
     graceful-fs "^4.2.9"
     slash "^3.0.0"
 
+babel-jest@^29.3.0:
+  version "29.3.0"
+  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.3.0.tgz#31fd7ef97dd6a77ddd1b4ab1f8cf77c29e20bb5c"
+  integrity sha512-LzQWdGm6hUugVeyGpIKI/T4SVT+PgAA5WFPqBDbneK7C/PqfckNb0tc4KvcKXq/PLA1yY6wTvB8Bc/REQdUxFg==
+  dependencies:
+    "@jest/transform" "^29.3.0"
+    "@types/babel__core" "^7.1.14"
+    babel-plugin-istanbul "^6.1.1"
+    babel-preset-jest "^29.2.0"
+    chalk "^4.0.0"
+    graceful-fs "^4.2.9"
+    slash "^3.0.0"
+
 babel-plugin-istanbul@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-istanbul/-/babel-plugin-istanbul-6.1.1.tgz#fa88ec59232fd9b4e36dbbc540a8ec9a9b47da73"
