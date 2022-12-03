@@ -5621,10 +5621,10 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
-release-please@^14.17.3:
-  version "14.17.3"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.17.3.tgz#173b9ed0e74c3151153c39a4517bd4e68da68844"
-  integrity sha512-JSJ5Y85CBPGoAyYHeLoYmJ2mjwJdWggaMvJFsLj9SmYq51ahiOpD0seA2N9ZRHKTcKF0iIIm2+vDONtOZLmTew==
+release-please@^14.17.4:
+  version "14.17.4"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.17.4.tgz#42b21f334e5ab0de3dfedb2377f7ec131eedd482"
+  integrity sha512-BCIUQZYoduscF8jD49kb2DIrBYtDQocs5XW/FQ6cXQt5iMoc8EcyodKEJXWIxJV/UuyMavp/5QOTTmIPBC0jrg==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^1.2.0"
