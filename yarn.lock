@@ -1545,12 +1545,13 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@google-automations/git-file-utils@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@google-automations/git-file-utils/-/git-file-utils-1.2.0.tgz#616bbcff928930827e0a99cd0a50f1e4832d26d0"
-  integrity sha512-tHkJQznc9uSBlOoss1vEwTZz/0uM3xLKFapfRX0u2gLTLciCktIsldhbS2GUVWPSvNUxcDgIr9n6iOqAunsQqg==
+"@google-automations/git-file-utils@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@google-automations/git-file-utils/-/git-file-utils-1.2.5.tgz#a1e43fc575044b383e3ea9e5672aa944268a3307"
+  integrity sha512-1fJ/+W5yzyzGIVet8SHUSF5zFJyhwNKoUB34oXp7zL72L6arwOhUs5CQ9S45cw3ReCFleAB9MjwX0f120ufX8g==
   dependencies:
-    "@octokit/rest" "19.0.4"
+    "@octokit/rest" "19.0.5"
+    "@octokit/types" "^8.0.0"
     minimatch "^5.1.0"
 
 "@humanwhocodes/config-array@^0.11.8":
@@ -1984,6 +1985,19 @@
     before-after-hook "^2.2.0"
     universal-user-agent "^6.0.0"
 
+"@octokit/core@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@octokit/core/-/core-4.1.0.tgz#b6b03a478f1716de92b3f4ec4fd64d05ba5a9251"
+  integrity sha512-Czz/59VefU+kKDy+ZfDwtOIYIkFjExOKf+HA92aiTZJ6EfWpFzYQWw0l54ji8bVmyhc+mGaLUbSUmXazG7z5OQ==
+  dependencies:
+    "@octokit/auth-token" "^3.0.0"
+    "@octokit/graphql" "^5.0.0"
+    "@octokit/request" "^6.0.0"
+    "@octokit/request-error" "^3.0.0"
+    "@octokit/types" "^8.0.0"
+    before-after-hook "^2.2.0"
+    universal-user-agent "^6.0.0"
+
 "@octokit/endpoint@^7.0.0":
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/@octokit/endpoint/-/endpoint-7.0.1.tgz#cb0d03e62e8762f3c80e52b025179de81899a823"
@@ -2007,12 +2021,24 @@
   resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-13.1.0.tgz#30459b45e6dd388d48d72de166f2f08ee8ece5b6"
   integrity sha512-Z7vzLqfTkoVQyoy/2iQla1N2I4Vav2wi4JbZK8QxIYAfBimhuflosFxmsqw5LTH7DkdNW46ZYpAcqJf0XaS8SQ==
 
+"@octokit/openapi-types@^14.0.0":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-14.0.0.tgz#949c5019028c93f189abbc2fb42f333290f7134a"
+  integrity sha512-HNWisMYlR8VCnNurDU6os2ikx0s0VyEjDYHNS/h4cgb8DeOxQ0n72HyinUtdDVxJhFy3FWLGl0DJhfEWk3P5Iw==
+
 "@octokit/plugin-paginate-rest@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-4.0.0.tgz#859a168262b657d46a8f1243ded66c87cee964b9"
   integrity sha512-g4GJMt/7VDmIMMdQenN6bmsmRoZca1c7IxOdF2yMiMwQYrE2bmmypGQeQSD5rsaffsFMCUS7Br4pMVZamareYA==
   dependencies:
     "@octokit/types" "^7.0.0"
+
+"@octokit/plugin-paginate-rest@^5.0.0":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-5.0.1.tgz#93d7e74f1f69d68ba554fa6b888c2a9cf1f99a83"
+  integrity sha512-7A+rEkS70pH36Z6JivSlR7Zqepz3KVucEFVDnSrgHXzG7WLAzYwcHZbKdfTXHwuTHbkT1vKvz7dHl1+HNf6Qyw==
+  dependencies:
+    "@octokit/types" "^8.0.0"
 
 "@octokit/plugin-request-log@^1.0.4":
   version "1.0.4"
@@ -2025,6 +2051,14 @@
   integrity sha512-qEu2wn6E7hqluZwIEUnDxWROvKjov3zMIAi4H4d7cmKWNMeBprEXZzJe8pE5eStUYC1ysGhD0B7L6IeG1Rfb+g==
   dependencies:
     "@octokit/types" "^7.0.0"
+    deprecation "^2.3.1"
+
+"@octokit/plugin-rest-endpoint-methods@^6.7.0":
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-6.7.0.tgz#2f6f17f25b6babbc8b41d2bb0a95a8839672ce7c"
+  integrity sha512-orxQ0fAHA7IpYhG2flD2AygztPlGYNAdlzYz8yrD8NDgelPfOYoRPROfEyIe035PlxvbYrgkfUZIhSBKju/Cvw==
+  dependencies:
+    "@octokit/types" "^8.0.0"
     deprecation "^2.3.1"
 
 "@octokit/request-error@^3.0.0":
@@ -2048,7 +2082,17 @@
     node-fetch "^2.6.7"
     universal-user-agent "^6.0.0"
 
-"@octokit/rest@19.0.4", "@octokit/rest@^19.0.0":
+"@octokit/rest@19.0.5", "@octokit/rest@^19.0.5":
+  version "19.0.5"
+  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-19.0.5.tgz#4dbde8ae69b27dca04b5f1d8119d282575818f6c"
+  integrity sha512-+4qdrUFq2lk7Va+Qff3ofREQWGBeoTKNqlJO+FGjFP35ZahP+nBenhZiGdu8USSgmq4Ky3IJ/i4u0xbLqHaeow==
+  dependencies:
+    "@octokit/core" "^4.1.0"
+    "@octokit/plugin-paginate-rest" "^5.0.0"
+    "@octokit/plugin-request-log" "^1.0.4"
+    "@octokit/plugin-rest-endpoint-methods" "^6.7.0"
+
+"@octokit/rest@^19.0.0":
   version "19.0.4"
   resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-19.0.4.tgz#fd8bed1cefffa486e9ae46a9dc608ce81bcfcbdd"
   integrity sha512-LwG668+6lE8zlSYOfwPj4FxWdv/qFXYBpv79TWIQEpBLKA9D/IMcWsF/U9RGpA3YqMVDiTxpgVpEW3zTFfPFTA==
@@ -2064,6 +2108,13 @@
   integrity sha512-+ClA0jRc9zGFj5mfQeQNfgTlelzhpAexbAueQG1t2Xn8yhgnsjkF8bgLcUUpwrpqkv296uXyiGwkqXRSU7KYzQ==
   dependencies:
     "@octokit/openapi-types" "^13.1.0"
+
+"@octokit/types@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@octokit/types/-/types-8.0.0.tgz#93f0b865786c4153f0f6924da067fe0bb7426a9f"
+  integrity sha512-65/TPpOJP1i3K4lBJMnWqPUJ6zuOtzhtagDvydAWbEXpbFYA0oMKKyLb95NFZZP0lSh/4b6K+DQlzvYQJQQePg==
+  dependencies:
+    "@octokit/openapi-types" "^14.0.0"
 
 "@pkgr/utils@^2.3.1":
   version "2.3.1"
@@ -2807,17 +2858,17 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha512-RpAVKQA5T63xEj6/giIbUEtZwJ4UFIc3ZtvEkiaUERylqe8xb5IvqcgOurZLahv93CLKfxcw5YI+DZcUBRyLXA==
 
-code-suggester@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/code-suggester/-/code-suggester-4.1.0.tgz#0c2e30173d6453bd8fcbdec94003fae3895998b3"
-  integrity sha512-l3V0QvXL//d78Kxuanlb89r6AT6G3ZM+qmwvHw3NyP7SjKkt+6LZcgEC6yH5T8hwZGSfz/9dXSek0cMn9tMqpw==
+code-suggester@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/code-suggester/-/code-suggester-4.2.0.tgz#0e841401b33e4ce05eac13c6525ad1b988e6ce06"
+  integrity sha512-XqPYs9XOaLidTArPmKJnCU3aWiiiC+/i2mfLS/VPp07BJA1fptb0ZS+H6LnWSF4jV9tTYAjCmB8ru9uM5SiybA==
   dependencies:
-    "@octokit/rest" "^19.0.0"
+    "@octokit/rest" "^19.0.5"
     "@types/yargs" "^16.0.0"
     async-retry "^1.3.1"
     diff "^5.0.0"
     glob "^7.1.6"
-    parse-diff "^0.9.0"
+    parse-diff "^0.10.0"
     yargs "^16.0.0"
 
 collect-v8-coverage@^1.0.0:
@@ -5357,10 +5408,10 @@ parent-module@^1.0.0:
   dependencies:
     callsites "^3.0.0"
 
-parse-diff@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/parse-diff/-/parse-diff-0.9.0.tgz#2e71b5dc5d8f4b9c19c471fd6325646dc9f21724"
-  integrity sha512-Jn+VZORAezkfOXR6B40EZcXxdJBamtgBpfeoFH6hxD+p0e74nVaCL9SWlQj1ggc8b6AexgPKlDiiE0CMMZDSbQ==
+parse-diff@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/parse-diff/-/parse-diff-0.10.0.tgz#5961025b3a3231a73ce45add331cf08c47c5d6af"
+  integrity sha512-7ZnB7HXPl2WdTtSGGzMFuCIzpmaxrDsLwKZp2AQRQVlmL9MUnCHESAmrbKKD5g+ItFJiCN2YPfPyMjWeJV/JoA==
 
 parse-github-repo-url@^1.4.1:
   version "1.4.1"
@@ -5688,13 +5739,13 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
-release-please@^14.17.5:
-  version "14.17.5"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.17.5.tgz#50c970ce182380a02638cece64059f1328eee232"
-  integrity sha512-LlAQ2HT7qQs3pZncMWcBkAVzGdGYW0IOyulzqFed5XTvVIjFPuaaxOAtE682mgFczt2JfekLxABaKai9mMCokQ==
+release-please@^15.1.1:
+  version "15.1.1"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-15.1.1.tgz#aa65387e7f2aad2a8332d12e647ab844f7110f69"
+  integrity sha512-R4MJL2b5ZYn8S18F8nQmxyWvAikwNmPHyT7u2VzJjrUCTHuGNIOaSZGVZuvCkTZgpcVD1+izJ3F1907LKWfGmA==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
-    "@google-automations/git-file-utils" "^1.2.0"
+    "@google-automations/git-file-utils" "^1.2.5"
     "@iarna/toml" "^2.2.5"
     "@lerna/collect-updates" "^4.0.0"
     "@lerna/package" "^4.0.0"
@@ -5707,7 +5758,7 @@ release-please@^14.17.5:
     "@types/npm-package-arg" "^6.1.0"
     "@xmldom/xmldom" "^0.8.4"
     chalk "^4.0.0"
-    code-suggester "^4.1.0"
+    code-suggester "^4.2.0"
     conventional-changelog-conventionalcommits "^5.0.0"
     conventional-changelog-writer "^5.0.0"
     conventional-commits-filter "^2.0.2"
