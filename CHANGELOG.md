@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.7.1...jest-md-dashboard-v0.7.2) (2023-01-11)
+
+
+### Bug Fixes
+
+* **deps:** Bump json5 from 1.0.1 to 1.0.2 ([#260](https://github.com/mshrtsr/jest-md-dashboard/issues/260)) ([0ea87ca](https://github.com/mshrtsr/jest-md-dashboard/commit/0ea87ca0b14d233f18a51c7d613f22e611596019))
+
 ## [0.7.1](https://github.com/mshrtsr/jest-md-dashboard/compare/jest-md-dashboard-v0.7.0...jest-md-dashboard-v0.7.1) (2022-09-08)
 
 
