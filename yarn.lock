@@ -6483,7 +6483,7 @@ regjsparser@^0.8.2:
   dependencies:
     jsesc "~0.5.0"
 
-release-please@^15.1.2:
+release-please@^15.9.1:
   version "15.9.1"
   resolved "https://registry.yarnpkg.com/release-please/-/release-please-15.9.1.tgz#898ea1b31492ef594b8729bd39f987949f8f5993"
   integrity sha512-Fs2aFCI5+chPq+qNKAQG0LXfAUPkXWb/hp/KJKM4EEi5kUlxIgJk93R+XlyJUDCAl0by5EFofusvsdOFxJJSrw==
