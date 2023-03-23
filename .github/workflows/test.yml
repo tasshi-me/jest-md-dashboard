@@ -23,6 +23,6 @@ jobs:
       - run: yarn test:generate-dashboard
       - run: cat test-dashboard.md | tee -a $GITHUB_STEP_SUMMARY
         if: always()
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@d9f34f8cd5cb3b3eb79b3e4b5dae3a16df499a70 # v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
