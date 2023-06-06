@@ -6792,10 +6792,10 @@ regjsparser@^0.9.1:
   dependencies:
     jsesc "~0.5.0"
 
-release-please@^15.10.5:
-  version "15.10.5"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-15.10.5.tgz#42db0c33ca15d293a298f4d1c4a9b915c529cf92"
-  integrity sha512-UJNsmu3Eab+MpfXrK38LaiTRRAk5yii6UdhJQw+hoxBR4OGyhmiUsZ3hwukvI2WLdoGtej5vSh7HKEQRPMvpBQ==
+release-please@^15.11.0:
+  version "15.11.0"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-15.11.0.tgz#e5d607a98f698123d37984f4cfb7fcf9d0a19b77"
+  integrity sha512-gCo/iK6OJXMh+QpkY76+ulQnXJZEac1CPZb57rKaQgvAomAqxiYdVscY5csfo/2iYnefuQ9dahVUfsAq2K6riQ==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^1.2.5"
@@ -6830,6 +6830,7 @@ release-please@^15.10.5:
     unist-util-visit "^2.0.3"
     unist-util-visit-parents "^3.1.1"
     xpath "^0.0.32"
+    yaml "^2.2.2"
     yargs "^17.0.0"
 
 require-directory@^2.1.1:
@@ -7735,6 +7736,11 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
+
+yaml@^2.2.2:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.3.1.tgz#02fe0975d23cd441242aa7204e09fc28ac2ac33b"
+  integrity sha512-2eHWfjaoXgTBC2jNM1LRef62VQa0umtvRiDSk6HSzW7RvS5YtkabJrwYLLEKWBc8a5U2PTSCs+dJjUTJdlHsWQ==
 
 yargs-parser@^20.2.2, yargs-parser@^20.2.3:
   version "20.2.9"
