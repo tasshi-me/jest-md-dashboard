@@ -47,7 +47,7 @@
     "@jest/globals": "^29.6.3",
     "@jest/reporters": "^29.3.1",
     "@jest/test-result": "^29.3.1",
-    "@jest/types": "^29.6.1",
+    "@jest/types": "^29.6.3",
     "@tsconfig/recommended": "^1.0.2",
     "@types/jest": "^29.5.3",
     "@typescript-eslint/parser": "^5.62.0",
