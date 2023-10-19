@@ -13,7 +13,7 @@ jobs:
       ISSUE_NUMBER: 20
     steps:
       - run: git config --global core.autocrlf false
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
