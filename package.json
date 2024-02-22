@@ -4,12 +4,12 @@
   "description": "Generating a pretty Markdown dashboard for Jest",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mshrtsr/jest-md-dashboard.git"
+    "url": "git+https://github.com/tasshi-me/jest-md-dashboard.git"
   },
   "bugs": {
-    "url": "https://github.com/mshrtsr/jest-md-dashboard/issues"
+    "url": "https://github.com/tasshi-me/jest-md-dashboard/issues"
   },
-  "homepage": "https://github.com/mshrtsr/jest-md-dashboard#readme",
+  "homepage": "https://github.com/tasshi-me/jest-md-dashboard#readme",
   "author": "Masaharu TASHIRO <masatsr.kit@gmail.com>",
   "license": "MIT",
   "keywords": [

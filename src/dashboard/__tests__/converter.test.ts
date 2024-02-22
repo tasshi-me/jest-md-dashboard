@@ -13,7 +13,7 @@ delete process.env.GITHUB_SHA;
 const baseOptions = {
   title: "My Dashboard",
   jestRootDir: "/path/to/rootDir/",
-  permalinkBaseUrl: "https://github.com/mshrtsr/jest-md-dashboard/blob/main/",
+  permalinkBaseUrl: "https://github.com/tasshi-me/jest-md-dashboard/blob/main/",
 };
 
 describe("convertResultsToDashboard", () => {

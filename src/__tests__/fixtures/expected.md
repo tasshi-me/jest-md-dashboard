@@ -10,7 +10,7 @@
 |Test Suites|2|0|-|2|
 |Tests|17|0|1|18|
 
-## src/__tests__/fixtures/sample-1.test.ts [[link](https://github.com/mshrtsr:jest-md-dashboard/blob/main/src/__tests__/fixtures/sample-1.test.ts)]
+## src/__tests__/fixtures/sample-1.test.ts [[link](https://github.com/tasshi-me:jest-md-dashboard/blob/main/src/__tests__/fixtures/sample-1.test.ts)]
 
 0 passed, 0 failed, 0 todo, done in 0 s
 
@@ -34,7 +34,7 @@
   - :white_check_mark: parametarized: 1
   - :white_check_mark: parametarized: 2
 
-## src/__tests__/fixtures/sample-2.test.ts [[link](https://github.com/mshrtsr:jest-md-dashboard/blob/main/src/__tests__/fixtures/sample-2.test.ts)]
+## src/__tests__/fixtures/sample-2.test.ts [[link](https://github.com/tasshi-me:jest-md-dashboard/blob/main/src/__tests__/fixtures/sample-2.test.ts)]
 
 0 passed, 0 failed, 0 todo, done in 0 s
 

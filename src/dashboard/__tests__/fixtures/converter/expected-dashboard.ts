@@ -5,7 +5,7 @@ const testFiles: TestFile[] = [
   {
     filePath: "src/__tests__/sample-1.test.ts",
     permalink:
-      "https://github.com/mshrtsr/jest-md-dashboard/blob/main/src/__tests__/sample-1.test.ts",
+      "https://github.com/tasshi-me/jest-md-dashboard/blob/main/src/__tests__/sample-1.test.ts",
     numPassingTests: 13,
     numFailingTests: 0,
     numTodoTests: 1,
@@ -65,7 +65,7 @@ const testFiles: TestFile[] = [
   {
     filePath: "src/__tests__/sample-2.test.ts",
     permalink:
-      "https://github.com/mshrtsr/jest-md-dashboard/blob/main/src/__tests__/sample-2.test.ts",
+      "https://github.com/tasshi-me/jest-md-dashboard/blob/main/src/__tests__/sample-2.test.ts",
     numPassingTests: 4,
     numFailingTests: 0,
     numTodoTests: 0,

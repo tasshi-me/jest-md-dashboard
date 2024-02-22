@@ -1,9 +1,9 @@
 # jest-md-dashboard
 
 [![npm version](https://badge.fury.io/js/jest-md-dashboard.svg)](https://badge.fury.io/js/jest-md-dashboard)
-[![codecov](https://codecov.io/gh/mshrtsr/jest-md-dashboard/branch/main/graph/badge.svg?token=K1X4K9S9UU)](https://codecov.io/gh/mshrtsr/jest-md-dashboard)
-[![test](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/test.yml/badge.svg)](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/test.yml)
-[![lint](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/lint.yml/badge.svg)](https://github.com/mshrtsr/jest-md-dashboard/actions/workflows/lint.yml)
+[![codecov](https://codecov.io/gh/tasshi-me/jest-md-dashboard/branch/main/graph/badge.svg?token=K1X4K9S9UU)](https://codecov.io/gh/tasshi-me/jest-md-dashboard)
+[![test](https://github.com/tasshi-me/jest-md-dashboard/actions/workflows/test.yml/badge.svg)](https://github.com/tasshi-me/jest-md-dashboard/actions/workflows/test.yml)
+[![lint](https://github.com/tasshi-me/jest-md-dashboard/actions/workflows/lint.yml/badge.svg)](https://github.com/tasshi-me/jest-md-dashboard/actions/workflows/lint.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Generating a pretty Markdown dashboard for Jest
@@ -19,7 +19,7 @@ Generating a pretty Markdown dashboard for Jest
 
 ## Example
 
-See https://github.com/mshrtsr/jest-md-dashboard/issues/20
+See https://github.com/tasshi-me/jest-md-dashboard/issues/20
 
 ## Installation
 
@@ -83,7 +83,7 @@ Specify this option when if generated permalinks are incorrect.
 
 The URL must have a trailing slash.
 
-e.g. `https://github.com/mshrtsr/jest-md-dashboard/blob/`
+e.g. `https://github.com/tasshi-me/jest-md-dashboard/blob/`
 
 #### 2. Run on GitHub Actions
 

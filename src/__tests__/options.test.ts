@@ -46,11 +46,11 @@ describe("buildPermalinkBaseUrl", () => {
   it("should return permalinkBaseUrl using user input", async () => {
     process.env.GITHUB_ACTIONS = "true";
     process.env.GITHUB_SERVER_URL = "https://github.com";
-    process.env.GITHUB_REPOSITORY = "mshrtsr/jest-md-dashboard";
+    process.env.GITHUB_REPOSITORY = "tasshi-me/jest-md-dashboard";
     process.env.GITHUB_SHA = "main";
     process.env.GITHUB_WORKSPACE = "/path/to/repository/";
     const input =
-      "https://github.example.com/mshrtsr/jest-md-dashboard/files/develop/";
+      "https://github.example.com/tasshi-me/jest-md-dashboard/files/develop/";
     const actual = await buildPermalinkBaseUrl({
       permalinkBaseUrl: input,
       jestRootDir: "/path/to/repository/",
@@ -63,7 +63,7 @@ describe("buildPermalinkBaseUrl", () => {
     beforeEach(() => {
       process.env.GITHUB_ACTIONS = "true";
       process.env.GITHUB_SERVER_URL = "https://github.com";
-      process.env.GITHUB_REPOSITORY = "mshrtsr/jest-md-dashboard";
+      process.env.GITHUB_REPOSITORY = "tasshi-me/jest-md-dashboard";
       process.env.GITHUB_SHA = "main";
       process.env.GITHUB_WORKSPACE = "/path/to/repository/";
     });
@@ -74,7 +74,7 @@ describe("buildPermalinkBaseUrl", () => {
         log,
       });
       const expected =
-        "https://github.com/mshrtsr/jest-md-dashboard/blob/main/";
+        "https://github.com/tasshi-me/jest-md-dashboard/blob/main/";
       expect(actual).toBe(expected);
     });
 
@@ -85,7 +85,7 @@ describe("buildPermalinkBaseUrl", () => {
         log,
       });
       const expected =
-        "https://github.example.com/mshrtsr/jest-md-dashboard/blob/main/";
+        "https://github.example.com/tasshi-me/jest-md-dashboard/blob/main/";
       expect(actual).toBe(expected);
     });
 
@@ -95,7 +95,7 @@ describe("buildPermalinkBaseUrl", () => {
         log,
       });
       const expected =
-        "https://github.com/mshrtsr/jest-md-dashboard/blob/main/subtree/";
+        "https://github.com/tasshi-me/jest-md-dashboard/blob/main/subtree/";
       expect(actual).toBe(expected);
     });
 
@@ -122,7 +122,7 @@ describe("buildPermalinkBaseUrl", () => {
         fs: fsSync,
         dir: gitProject,
         remote: "origin",
-        url: "git@github.com:mshrtsr/jest-md-dashboard.git",
+        url: "git@github.com:tasshi-me/jest-md-dashboard.git",
       });
       const sha = await git.commit({
         fs: fsSync,
@@ -135,7 +135,7 @@ describe("buildPermalinkBaseUrl", () => {
         jestRootDir: gitProject,
         log,
       });
-      const expected = `https://github.com/mshrtsr/jest-md-dashboard/blob/${sha}/`;
+      const expected = `https://github.com/tasshi-me/jest-md-dashboard/blob/${sha}/`;
       expect(actual).toBe(expected);
     });
     it("should return undefined if jest runs outside of git project", async () => {

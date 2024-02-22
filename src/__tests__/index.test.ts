@@ -11,7 +11,7 @@ const rootDir = path.resolve(__dirname, "..", "..");
 const env = {
   GITHUB_ACTIONS: "true",
   GITHUB_SERVER_URL: "https://github.com",
-  GITHUB_REPOSITORY: "mshrtsr:jest-md-dashboard",
+  GITHUB_REPOSITORY: "tasshi-me:jest-md-dashboard",
   GITHUB_SHA: "main",
   GITHUB_WORKSPACE: rootDir,
 };
