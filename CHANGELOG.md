@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.8.0](https://github.com/tasshi-me/jest-md-dashboard/compare/jest-md-dashboard-v0.7.2...jest-md-dashboard-v0.8.0) (2024-02-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop Node 14 and 16 support ([#469](https://github.com/tasshi-me/jest-md-dashboard/issues/469))
+
+### Bug Fixes
+
+* **deps:** update dependency typescript to v5 ([#289](https://github.com/tasshi-me/jest-md-dashboard/issues/289)) ([4d513f7](https://github.com/tasshi-me/jest-md-dashboard/commit/4d513f76696d31077c6fc0b33a8718adac7dfc95))
+
+
+### Miscellaneous Chores
+
+* drop Node 14 and 16 support ([#469](https://github.com/tasshi-me/jest-md-dashboard/issues/469)) ([d786b57](https://github.com/tasshi-me/jest-md-dashboard/commit/d786b572416394771a29b764fa474c4a57a4867f))
+
 ## [0.7.2](https://github.com/tasshi-me/jest-md-dashboard/compare/jest-md-dashboard-v0.7.1...jest-md-dashboard-v0.7.2) (2023-01-11)
 
 
