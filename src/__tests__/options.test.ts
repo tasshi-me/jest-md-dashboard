@@ -29,7 +29,7 @@ describe("buildOutputPath", () => {
   });
   it("should return input value", () => {
     expect(buildOutputPath("/path/to/dashboard.md")).toBe(
-      "/path/to/dashboard.md"
+      "/path/to/dashboard.md",
     );
   });
 });
@@ -105,9 +105,9 @@ describe("buildPermalinkBaseUrl", () => {
         buildPermalinkBaseUrl({
           jestRootDir: "/path/to/repository/subtree",
           log,
-        })
+        }),
       ).rejects.toThrow(
-        "The following environment variables are required for the GitHub Actions environment\n- GITHUB_SERVER_URL\n- GITHUB_REPOSITORY\n- GITHUB_SHA\n- GITHUB_WORKSPACE"
+        "The following environment variables are required for the GitHub Actions environment\n- GITHUB_SERVER_URL\n- GITHUB_REPOSITORY\n- GITHUB_SHA\n- GITHUB_WORKSPACE",
       );
     });
   });
@@ -115,7 +115,7 @@ describe("buildPermalinkBaseUrl", () => {
   describe("using local git config", () => {
     it("should return permalinkBaseUrl using git config", async () => {
       const gitProject = await fs.mkdtemp(
-        path.join(os.tmpdir(), "jest-md-dashboard-")
+        path.join(os.tmpdir(), "jest-md-dashboard-"),
       );
       await git.init({ fs: fsSync, dir: gitProject });
       await git.addRemote({
@@ -140,7 +140,7 @@ describe("buildPermalinkBaseUrl", () => {
     });
     it("should return undefined if jest runs outside of git project", async () => {
       const nonGitProject = await fs.mkdtemp(
-        path.join(os.tmpdir(), "jest-md-dashboard-")
+        path.join(os.tmpdir(), "jest-md-dashboard-"),
       );
       const actual = await buildPermalinkBaseUrl({
         jestRootDir: nonGitProject,

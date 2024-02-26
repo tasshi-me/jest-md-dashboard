@@ -34,7 +34,7 @@ describe("jest-md-dashboard", () => {
       .replace(/\|.+\|\d(\.\d+)? s\|/, "|0|0 s|")
       .replace(
         /\d+ passed, \d+ failed, \d+ todo, done in \d(\.\d+)? s/g,
-        "0 passed, 0 failed, 0 todo, done in 0 s"
+        "0 passed, 0 failed, 0 todo, done in 0 s",
       );
     expect(output).toBe(await fs.readFile(expectedPath, "utf-8"));
   });
