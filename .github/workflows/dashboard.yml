@@ -14,12 +14,14 @@ jobs:
     steps:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
-      - run: yarn test:generate-dashboard
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm build
+      - run: pnpm test:generate-dashboard
       - run: gh issue edit ${{ env.ISSUE_NUMBER }} --body-file ./test-dashboard.md
         if: always()

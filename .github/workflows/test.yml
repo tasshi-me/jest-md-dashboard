@@ -14,13 +14,15 @@ jobs:
     steps:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: "${{ matrix.node-version }}"
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
-      - run: yarn test:generate-dashboard
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm build
+      - run: pnpm test:generate-dashboard
       - run: cat test-dashboard.md | tee -a $GITHUB_STEP_SUMMARY
         if: always()
       - uses: codecov/codecov-action@0cfda1dd0a4ad9efc75517f399d859cd1ea4ced1 # v4
