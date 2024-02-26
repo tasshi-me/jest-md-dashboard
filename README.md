@@ -35,6 +35,12 @@ npm install -D jest-md-dashboard
 yarn add -D jest-md-dashboard
 ```
 
+### pnpm
+
+```shell
+pnpm add -D jest-md-dashboard
+```
+
 ## Usage
 
 Add `reporters` field in `jest.config.js`.

@@ -22,7 +22,9 @@
   "engines": {
     "node": ">=v18.0.0"
   },
+  "packageManager": "pnpm@8.15.3",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "prebuild": "run-s clean",
     "build": "tsc --build tsconfig.json --force",
     "start": "run-s 'build -w'",
