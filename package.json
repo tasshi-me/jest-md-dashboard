@@ -45,7 +45,7 @@
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-typescript": "^7.23.3",
-    "@cybozu/eslint-config": "^18.0.3",
+    "@cybozu/eslint-config": "^22.0.2",
     "@jest/globals": "^29.7.0",
     "@jest/reporters": "^29.3.1",
     "@jest/test-result": "^29.7.0",
