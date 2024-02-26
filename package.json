@@ -1,6 +1,6 @@
 {
   "name": "jest-md-dashboard",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "description": "Generating a pretty Markdown dashboard for Jest",
   "repository": {
     "type": "git",
