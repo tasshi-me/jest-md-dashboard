@@ -33,7 +33,7 @@ export class MarkdownDashboardReporter implements Reporter {
   constructor(
     globalConfig: Config.GlobalConfig,
     reporterOptions: ReporterOptions,
-    reporterContext: ReporterContext
+    reporterContext: ReporterContext,
   ) {
     this.globalConfig = globalConfig;
     this.context = reporterContext;
@@ -58,7 +58,7 @@ export class MarkdownDashboardReporter implements Reporter {
 
   onRunComplete = async (
     testContexts: Set<TestContext>,
-    results: AggregatedResult
+    results: AggregatedResult,
   ): Promise<void> => {
     const permalinkBaseUrl = await this.permalinkBaseUrl;
     const dashboard = convertResultsToDashboard(results, {

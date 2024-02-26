@@ -37,7 +37,7 @@ export const buildPermalinkBaseUrl = async ({
       !process.env.GITHUB_WORKSPACE
     ) {
       throw new Error(
-        "The following environment variables are required for the GitHub Actions environment\n- GITHUB_SERVER_URL\n- GITHUB_REPOSITORY\n- GITHUB_SHA\n- GITHUB_WORKSPACE"
+        "The following environment variables are required for the GitHub Actions environment\n- GITHUB_SERVER_URL\n- GITHUB_REPOSITORY\n- GITHUB_SHA\n- GITHUB_WORKSPACE",
       );
     }
     const serverUrl = process.env.GITHUB_SERVER_URL;

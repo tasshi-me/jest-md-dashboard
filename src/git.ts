@@ -1,5 +1,5 @@
 export const parseRemoteUrl = (
-  url: string
+  url: string,
 ): { serverUrl: string; repository: string } => {
   // HTTPS or HTTP (e.g. https://github.com/USERNAME/REPOSITORY.git)
   if (url.startsWith("https://") || url.startsWith("http://")) {

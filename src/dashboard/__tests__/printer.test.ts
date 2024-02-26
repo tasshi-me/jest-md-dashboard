@@ -8,14 +8,14 @@ import { dashboard as noPermalinkDashboard } from "./fixtures/printer/no-permali
 
 const expected = fs.readFileSync(
   path.resolve(__dirname, "./fixtures/printer/default/expected-dashboard.md"),
-  "utf-8"
+  "utf-8",
 );
 const noPermalinkExpected = fs.readFileSync(
   path.resolve(
     __dirname,
-    "./fixtures/printer/no-permalink/expected-dashboard.md"
+    "./fixtures/printer/no-permalink/expected-dashboard.md",
   ),
-  "utf-8"
+  "utf-8",
 );
 
 describe("printDashBoard", () => {

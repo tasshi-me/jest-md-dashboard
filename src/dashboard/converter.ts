@@ -15,17 +15,17 @@ export const convertResultsToDashboard = (
     title: string;
     jestRootDir: string;
     permalinkBaseUrl?: string;
-  }
+  },
 ): Dashboard => {
   const summary = convertSummary(results);
   results.testResults.sort((a, b) =>
-    a.testFilePath.localeCompare(b.testFilePath)
+    a.testFilePath.localeCompare(b.testFilePath),
   );
   const testFiles: TestFile[] = results.testResults.map((resultByFile) =>
     convertTestFile(resultByFile, {
       jestRootDir: options.jestRootDir,
       permalinkBaseUrl: options.permalinkBaseUrl,
-    })
+    }),
   );
   return {
     title: options.title,
@@ -57,7 +57,7 @@ const convertTestFile = (
   options: {
     jestRootDir: string;
     permalinkBaseUrl?: string;
-  }
+  },
 ): TestFile => {
   const filePath = path.relative(options.jestRootDir, result.testFilePath);
   const permalink: string | undefined = options.permalinkBaseUrl
@@ -82,7 +82,7 @@ const convertTestFile = (
 
 const convertChildren = (
   results: AssertionResult[],
-  currentLevel: number = 0
+  currentLevel: number = 0,
 ): Array<Describe | Test> => {
   const children: Array<Describe | Test> = [];
   for (let index = 0; index < results.length; index++) {

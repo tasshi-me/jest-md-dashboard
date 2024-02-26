@@ -45,19 +45,19 @@ const printTestFiles = (testFiles: TestFile[]): string => {
 
 const printChildren = (
   children: Array<Test | Describe>,
-  currentLevel: number = 0
+  currentLevel: number = 0,
 ): string => {
   let resultText = "";
   for (const child of children) {
     switch (child.type) {
       case "test":
         resultText += `${"  ".repeat(currentLevel)}- ${printStatus(
-          child.status
+          child.status,
         )} ${child.title}\n`;
         break;
       case "describe":
         resultText += `${"  ".repeat(currentLevel)}- ${printStatus(
-          child.status
+          child.status,
         )} ${child.describe}\n`;
         resultText += printChildren(child.children, currentLevel + 1);
         break;
