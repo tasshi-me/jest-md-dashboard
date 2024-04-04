@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   isomorphic-git:
-    specifier: ^1.25.6
-    version: 1.25.6
+    specifier: ^1.25.7
+    version: 1.25.7
 
 devDependencies:
   '@babel/core':
@@ -3626,7 +3626,7 @@ packages:
       eslint: 8.57.0
       eslint-plugin-es: 3.0.1(eslint@8.57.0)
       eslint-utils: 2.1.0
-      ignore: 5.2.0
+      ignore: 5.3.1
       minimatch: 3.1.2
       resolve: 1.22.8
       semver: 6.3.1
@@ -4252,11 +4252,11 @@ packages:
   /ignore@5.2.0:
     resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
     engines: {node: '>= 4'}
+    dev: true
 
   /ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
-    dev: true
 
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
@@ -4532,8 +4532,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /isomorphic-git@1.25.6:
-    resolution: {integrity: sha512-zA3k3QOO7doqOnBgwsaXJwHKSIIl5saEdH4xxalu082WHVES4KghsG6RE2SDwjXMCIlNa1bWocbitH6bRIrmLQ==}
+  /isomorphic-git@1.25.7:
+    resolution: {integrity: sha512-KE10ejaIsEpQ+I/apS33qqTjyzCXgOniEaL32DwNbXtboKG8H3cu+RiBcdp3G9w4MpOOTQfGPsWp4i8UxRfDLg==}
     engines: {node: '>=12'}
     hasBin: true
     dependencies:
@@ -4541,7 +4541,7 @@ packages:
       clean-git-ref: 2.0.1
       crc-32: 1.2.2
       diff3: 0.0.3
-      ignore: 5.2.0
+      ignore: 5.3.1
       minimisted: 2.0.1
       pako: 1.0.11
       pify: 4.0.1
