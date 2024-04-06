@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^29.6.3
     version: 29.6.3
   '@tsconfig/recommended':
-    specifier: ^1.0.5
-    version: 1.0.5
+    specifier: ^1.0.6
+    version: 1.0.6
   '@types/jest':
     specifier: ^29.5.12
     version: 29.5.12
@@ -1977,8 +1977,8 @@ packages:
       '@sinonjs/commons': 2.0.0
     dev: true
 
-  /@tsconfig/recommended@1.0.5:
-    resolution: {integrity: sha512-bbozf0TZVH1Tu9hET9HYTtKeOMBBR01kjhc8s+c9cDFQU8Jw6F9A3tRZYOWiMEyMqpf/3LSw2b528g1k8TkYvg==}
+  /@tsconfig/recommended@1.0.6:
+    resolution: {integrity: sha512-0IKu9GHYF1NGTJiYgfWwqnOQSlnE9V9R7YohHNNf0/fj/SyOZWzdd06JFr0fLpg1Mqw0kGbYg8w5xdkSqLKM9g==}
     dev: true
 
   /@types/babel__core@7.1.19:
