@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^3.3.1
     version: 3.3.1
   release-please:
-    specifier: ^16.10.2
-    version: 16.10.2
+    specifier: ^16.12.0
+    version: 16.12.0
   rimraf:
     specifier: ^5.0.7
     version: 5.0.7
@@ -6026,8 +6026,8 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /release-please@16.10.2:
-    resolution: {integrity: sha512-OX6N7xx3F3ZCd1+B7yq2Ix6KfuA7zXxMP04q3xYic3Hb0X/dOzy8p50xnrxzFpIVJridp1Dn74dUgzjImK6Mdg==}
+  /release-please@16.12.0:
+    resolution: {integrity: sha512-GTZBZQ/1fJwBk6y/BMSdzOczRkEu2L9LrPOXeS1FMHxY/djQLYfwfCEFrmzxGDWfsJvEeDxJlPEPR66s6WWN9w==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
