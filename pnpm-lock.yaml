@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   isomorphic-git:
-    specifier: ^1.26.5
+    specifier: ^1.27.0
     version: 1.27.0
 
 devDependencies:
