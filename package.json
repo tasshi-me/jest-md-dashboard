@@ -20,7 +20,7 @@
   "type": "module",
   "exports": "./lib/index.js",
   "engines": {
-    "node": ">=18.20.3"
+    "node": ">=18.20.4"
   },
   "packageManager": "pnpm@8.15.8",
   "scripts": {
