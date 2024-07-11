@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.8",
-    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-env": "^7.24.8",
     "@babel/preset-typescript": "^7.24.7",
     "@cybozu/eslint-config": "^22.0.2",
     "@jest/globals": "^29.7.0",
