@@ -42,7 +42,7 @@
     "isomorphic-git": "^1.27.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.7",
+    "@babel/core": "^7.24.8",
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@cybozu/eslint-config": "^22.0.2",
