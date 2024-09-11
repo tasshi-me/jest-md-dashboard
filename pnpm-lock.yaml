@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^3.3.3
     version: 3.3.3
   release-please:
-    specifier: ^16.12.0
-    version: 16.12.0
+    specifier: ^16.12.2
+    version: 16.12.2
   rimraf:
     specifier: ^5.0.10
     version: 5.0.10
@@ -3357,6 +3357,11 @@ packages:
     engines: {node: '>=0.3.1'}
     dev: true
 
+  /diff@7.0.0:
+    resolution: {integrity: sha512-PJWHUb1RFevKCwaFA9RlG5tCd+FO5iRh9A8HEtkmBH2Li03iJriB6m6JIN4rGz3K3JLawI7/veA1xzRKP6ISBw==}
+    engines: {node: '>=0.3.1'}
+    dev: true
+
   /dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
@@ -4467,13 +4472,6 @@ packages:
       function-bind: 1.1.2
     dev: true
 
-  /hasown@2.0.1:
-    resolution: {integrity: sha512-1/th4MHjnwncwXsIW6QMzlvYL9kG5e/CpVvLRZe4XPa8TOUNbCELqmvhDmnkNsAjwaG4+I8gJJL0JBvTTLO9qA==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      function-bind: 1.1.2
-    dev: true
-
   /hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
@@ -4631,12 +4629,6 @@ packages:
   /is-callable@1.2.7:
     resolution: {integrity: sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==}
     engines: {node: '>= 0.4'}
-    dev: true
-
-  /is-core-module@2.13.1:
-    resolution: {integrity: sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==}
-    dependencies:
-      hasown: 2.0.1
     dev: true
 
   /is-core-module@2.15.1:
@@ -5705,7 +5697,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       hosted-git-info: 4.1.0
-      is-core-module: 2.13.1
+      is-core-module: 2.15.1
       semver: 7.6.3
       validate-npm-package-license: 3.0.4
     dev: true
@@ -6217,8 +6209,8 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /release-please@16.12.0:
-    resolution: {integrity: sha512-GTZBZQ/1fJwBk6y/BMSdzOczRkEu2L9LrPOXeS1FMHxY/djQLYfwfCEFrmzxGDWfsJvEeDxJlPEPR66s6WWN9w==}
+  /release-please@16.12.2:
+    resolution: {integrity: sha512-2Dwx0Nz9Zdi/I+u6cVcM+unzRws8KUuXYWKePNbjwaNIojcKtUBCFNUM/xMl+J229UJUy+PoJPMle8VMUz7tIw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
@@ -6237,7 +6229,7 @@ packages:
       conventional-changelog-writer: 6.0.1
       conventional-commits-filter: 3.0.0
       detect-indent: 6.1.0
-      diff: 5.1.0
+      diff: 7.0.0
       figures: 3.2.0
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.4
@@ -6245,7 +6237,7 @@ packages:
       jsonpath: 1.1.1
       node-html-parser: 6.0.0
       parse-github-repo-url: 1.4.1
-      semver: 7.6.0
+      semver: 7.6.3
       type-fest: 3.1.0
       typescript: 4.7.4
       unist-util-visit: 2.0.3
@@ -6302,7 +6294,7 @@ packages:
     resolution: {integrity: sha512-iMDbmAWtfU+MHpxt/I5iWI7cY6YVEZUQ3MBgPQ++XD1PELuJHIl82xBmObyP2KyQmkNB2dsqF7seoQQiAn5yDQ==}
     hasBin: true
     dependencies:
-      is-core-module: 2.13.1
+      is-core-module: 2.15.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
