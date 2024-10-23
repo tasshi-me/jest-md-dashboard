@@ -51,7 +51,7 @@
     "@jest/test-result": "^29.7.0",
     "@jest/types": "^29.6.3",
     "@tsconfig/recommended": "^1.0.7",
-    "@types/jest": "^29.5.13",
+    "@types/jest": "^29.5.14",
     "@typescript-eslint/parser": "^8.11.0",
     "babel-jest": "^29.7.0",
     "eslint": "^8.57.1",
