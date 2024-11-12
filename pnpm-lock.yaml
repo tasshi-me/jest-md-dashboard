@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^3.3.3
     version: 3.3.3
   release-please:
-    specifier: ^16.14.3
-    version: 16.14.3
+    specifier: ^16.14.4
+    version: 16.14.4
   rimraf:
     specifier: ^5.0.10
     version: 5.0.10
@@ -2299,6 +2299,7 @@ packages:
   /@xmldom/xmldom@0.8.5:
     resolution: {integrity: sha512-0dpjDLeCXYThL2YhqZcd/spuwoH+dmnFoND9ZxZkAYxp1IJUB2GP16ow2MJRsjVxy8j1Qv8BJRmN5GKnbDKCmQ==}
     engines: {node: '>=10.0.0'}
+    deprecated: this version has critical issues, please update to the latest version
     dev: true
 
   /acorn-jsx@5.3.2(acorn@8.9.0):
@@ -5868,8 +5869,8 @@ packages:
       jsesc: 3.0.2
     dev: true
 
-  /release-please@16.14.3:
-    resolution: {integrity: sha512-eOhuIK0P4nZRxk1AVgKkKBKyn/StPuON1nYpy9TozlxuLLrcaSrN5A2Zc5lCLEG38de1y4qAAUBy0DEkJUgxBg==}
+  /release-please@16.14.4:
+    resolution: {integrity: sha512-3i4ze8hkdMhaCvQpJS+m5q6W5UljOcVtBEDkV/k4TU7RvYmfBJz5V97YO00VXvl7F4W8r5orTFNUk66BlnQ0Jw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
