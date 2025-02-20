@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^3.5.1
     version: 3.5.1
   release-please:
-    specifier: ^16.15.0
-    version: 16.15.0
+    specifier: ^16.16.0
+    version: 16.16.0
   rimraf:
     specifier: ^5.0.10
     version: 5.0.10
@@ -5935,8 +5935,8 @@ packages:
       jsesc: 3.0.2
     dev: true
 
-  /release-please@16.15.0:
-    resolution: {integrity: sha512-C55PsUOMzAbPSrdqF/KKAqhaYVRGlarNNWgW/DyAsg15U4g/TkxXVpEZqAV1o38CoEoKhssnKTGnb5/eT4/DUw==}
+  /release-please@16.16.0:
+    resolution: {integrity: sha512-4tsobA3perPhvd5nIBSmppikqMXwobg9czANV6iElIB/wLqrqWfBuG+qEJOuF5GqudnaAxu2IWXUZIKVV26Rqw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
@@ -6917,7 +6917,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       cliui: 7.0.4
-      escalade: 3.1.2
+      escalade: 3.2.0
       get-caller-file: 2.0.5
       require-directory: 2.1.1
       string-width: 4.2.3
