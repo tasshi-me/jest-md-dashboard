@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   isomorphic-git:
-    specifier: ^1.30.2
-    version: 1.30.2
+    specifier: ^1.30.3
+    version: 1.30.3
 
 devDependencies:
   '@babel/core':
@@ -4669,14 +4669,6 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
   /fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -5243,8 +5235,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /isomorphic-git@1.30.2:
-    resolution: {integrity: sha512-Io/AkS58RFp0Sm+PPHkPT2NHfsxkG1+F6iOuPYxWvF1K0ZgIzT950lYt1G5PkhZr2edzIUoDJcqWYbxPIL6mXw==}
+  /isomorphic-git@1.30.3:
+    resolution: {integrity: sha512-7nIluf7aHvbQjo0OUIgI0l1M2wD3pzyZaaTsayUB6ajf9w0MkIh7Vti9vYWFskK5GoL4YCfRZf+MPQhRXCUEBQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dependencies:
@@ -5683,7 +5675,7 @@ packages:
       micromatch: 4.0.5
       walker: 1.0.8
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /jest-haste-map@30.0.0:
