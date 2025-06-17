@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^29.6.3
     version: 29.6.3
   '@tsconfig/recommended':
-    specifier: ^1.0.8
-    version: 1.0.8
+    specifier: ^1.0.9
+    version: 1.0.9
   '@types/jest':
     specifier: ^29.5.14
     version: 29.5.14
@@ -2322,8 +2322,8 @@ packages:
       '@sinonjs/commons': 3.0.1
     dev: true
 
-  /@tsconfig/recommended@1.0.8:
-    resolution: {integrity: sha512-TotjFaaXveVUdsrXCdalyF6E5RyG6+7hHHQVZonQtdlk1rJZ1myDIvPUUKPhoYv+JAzThb2lQJh9+9ZfF46hsA==}
+  /@tsconfig/recommended@1.0.9:
+    resolution: {integrity: sha512-jf+a+mlsEi7V/RhoSgn7KlxCplFV2DVyfNEKSWBiUYKe2OuRVC/LZB5pUTA7KSB++c23LI66qc2VJXF7DCHGAA==}
     dev: true
 
   /@tybys/wasm-util@0.9.0:
