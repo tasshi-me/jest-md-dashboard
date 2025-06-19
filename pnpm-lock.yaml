@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^29.7.0
     version: 29.7.0
   '@jest/types':
-    specifier: ^29.6.3
-    version: 29.6.3
+    specifier: ^30.0.1
+    version: 30.0.1
   '@tsconfig/recommended':
     specifier: ^1.0.10
     version: 1.0.10
