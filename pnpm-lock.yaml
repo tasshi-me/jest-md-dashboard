@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^29.7.0
     version: 29.7.0
   '@jest/test-result':
-    specifier: ^29.7.0
-    version: 29.7.0
+    specifier: ^30.0.4
+    version: 30.0.4
   '@jest/types':
     specifier: ^29.6.3
     version: 29.6.3
@@ -1601,6 +1601,18 @@ packages:
       slash: 3.0.0
     dev: true
 
+  /@jest/console@30.0.4:
+    resolution: {integrity: sha512-tMLCDvBJBwPqMm4OAiuKm2uF5y5Qe26KgcMn+nrDSWpEW+eeFmqA0iO4zJfL16GP7gE3bUUQ3hIuUJ22AqVRnw==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+    dependencies:
+      '@jest/types': 30.0.1
+      '@types/node': 18.0.0
+      chalk: 4.1.2
+      jest-message-util: 30.0.2
+      jest-util: 30.0.2
+      slash: 3.0.0
+    dev: true
+
   /@jest/core@29.7.0:
     resolution: {integrity: sha512-n7aeXWKMnGtDA48y8TLWJPJmLmmZ642Ceo78cYWEpiD7FzDgmNDV/GCVRorPABdXLJZ/9wzzgZAlHjXjxDHGsg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -1938,6 +1950,16 @@ packages:
     engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
     dependencies:
       '@jest/console': 30.0.2
+      '@jest/types': 30.0.1
+      '@types/istanbul-lib-coverage': 2.0.6
+      collect-v8-coverage: 1.0.2
+    dev: true
+
+  /@jest/test-result@30.0.4:
+    resolution: {integrity: sha512-Mfpv8kjyKTHqsuu9YugB6z1gcdB3TSSOaKlehtVaiNlClMkEHY+5ZqCY2CrEE3ntpBMlstX/ShDAf84HKWsyIw==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+    dependencies:
+      '@jest/console': 30.0.4
       '@jest/types': 30.0.1
       '@types/istanbul-lib-coverage': 2.0.6
       collect-v8-coverage: 1.0.2
