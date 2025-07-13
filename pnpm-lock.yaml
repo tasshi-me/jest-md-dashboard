@@ -41,7 +41,7 @@ devDependencies:
     specifier: ^29.5.14
     version: 29.5.14
   '@typescript-eslint/parser':
-    specifier: ^8.35.1
+    specifier: ^8.36.0
     version: 8.36.0(eslint@8.57.1)(typescript@5.8.3)
   babel-jest:
     specifier: ^29.7.0
