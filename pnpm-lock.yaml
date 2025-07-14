@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   isomorphic-git:
-    specifier: ^1.31.1
-    version: 1.31.1
+    specifier: ^1.32.1
+    version: 1.32.1
 
 devDependencies:
   '@babel/core':
@@ -5546,8 +5546,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /isomorphic-git@1.31.1:
-    resolution: {integrity: sha512-aQ2fg2Qf69Abhu4C3WkRDhr5WcY40mQpIALC2+HTJjeyKlKT/7pXm9KUEtcCbR6TnLxmzOO98IFQvkY6cBIzaw==}
+  /isomorphic-git@1.32.1:
+    resolution: {integrity: sha512-NZCS7qpLkCZ1M/IrujYBD31sM6pd/fMVArK4fz4I7h6m0rUW2AsYU7S7zXeABuHL6HIfW6l53b4UQ/K441CQjg==}
     engines: {node: '>=14.17'}
     hasBin: true
     dependencies:
