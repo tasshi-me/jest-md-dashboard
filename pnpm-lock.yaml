@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^29.7.0
     version: 29.7.0
   '@jest/test-result':
-    specifier: ^29.7.0
-    version: 29.7.0
+    specifier: ^30.0.5
+    version: 30.0.5
   '@jest/types':
     specifier: ^30.0.5
     version: 30.0.5
@@ -1931,8 +1931,8 @@ packages:
     dependencies:
       '@jest/console': 29.7.0
       '@jest/types': 29.6.3
-      '@types/istanbul-lib-coverage': 2.0.4
-      collect-v8-coverage: 1.0.1
+      '@types/istanbul-lib-coverage': 2.0.6
+      collect-v8-coverage: 1.0.2
     dev: true
 
   /@jest/test-result@30.0.5:
@@ -2376,10 +2376,6 @@ packages:
     resolution: {integrity: sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==}
     dependencies:
       '@types/node': 18.0.0
-    dev: true
-
-  /@types/istanbul-lib-coverage@2.0.4:
-    resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
     dev: true
 
   /@types/istanbul-lib-coverage@2.0.6:
