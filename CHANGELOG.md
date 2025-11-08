@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/tasshi-me/jest-md-dashboard/compare/jest-md-dashboard-v0.8.0...jest-md-dashboard-v0.8.1) (2025-11-08)
+
+
+### Continuous Integration
+
+* use trusted publishing ([#783](https://github.com/tasshi-me/jest-md-dashboard/issues/783)) ([ace01c8](https://github.com/tasshi-me/jest-md-dashboard/commit/ace01c8aa1c74cddd9294ba6e15dd6236eb4edff))
+
 ## [0.8.0](https://github.com/tasshi-me/jest-md-dashboard/compare/jest-md-dashboard-v0.7.2...jest-md-dashboard-v0.8.0) (2024-02-26)
 
 
