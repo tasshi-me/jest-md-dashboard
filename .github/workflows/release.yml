@@ -1,3 +1,6 @@
+# WARNING: When you rename a workflow filename, remember to update the Trusted Publishing settings as well.
+# https://www.npmjs.com/package/jest-md-dashboard/access
+# ref. https://docs.npmjs.com/trusted-publishers
 name: release-and-publish
 on:
   push:
@@ -15,6 +18,9 @@ jobs:
 
   # https://github.com/google-github-actions/release-please-action#automating-publication-to-npm
   publish:
+    permissions:
+      contents: read
+      id-token: write # Required for OIDC authn and npm provenance
     runs-on: ubuntu-latest
     needs: release
     if: ${{ needs.release.outputs.release_created }}
@@ -25,10 +31,14 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 'lts/*'
-          registry-url: 'https://registry.npmjs.org'
           cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
+      # Ensure npm 11.5.1 or later is installed
+      # ref. https://docs.npmjs.com/trusted-publishers#github-actions-configuration
+      - run: npm install -g npm@latest
       - run: pnpm install
       - run: pnpm build
-      - run: pnpm publish
+      - run: pnpm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          # https://docs.npmjs.com/generating-provenance-statements#using-third-party-package-publishing-tools
+          NPM_CONFIG_PROVENANCE: true
