@@ -37,8 +37,8 @@ importers:
         specifier: ^30.2.0
         version: 30.2.0
       '@tsconfig/recommended':
-        specifier: ^1.0.11
-        version: 1.0.11
+        specifier: ^1.0.12
+        version: 1.0.13
       '@types/jest':
         specifier: ^29.5.14
         version: 29.5.14
@@ -1018,8 +1018,8 @@ packages:
   '@sinonjs/fake-timers@13.0.5':
     resolution: {integrity: sha512-36/hTbH2uaWuGVERyC6da9YwGWnzUZXuPro/F2LfsdOsLnCojz/iSH8MxUt/FD2S5XBSVPhmArFUXcpCQ2Hkiw==}
 
-  '@tsconfig/recommended@1.0.11':
-    resolution: {integrity: sha512-irACIVvr9SnQK+zsrO7TkBVTq9LAafdyrjUxv6qgNh2wPi3/hFHcKEWMMlOd4HnRIDMdtI7ciVoPcZ9EuB7xMg==}
+  '@tsconfig/recommended@1.0.13':
+    resolution: {integrity: sha512-sySRuBfMKyKO/j2ZAhR8kSembhjuPEV4Ra3AHtmWLq51+iGaudr45crPSzNC5b7/Ctrh9dfUpBuTlYrH6rM58Q==}
 
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
@@ -5133,7 +5133,7 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@tsconfig/recommended@1.0.11': {}
+  '@tsconfig/recommended@1.0.13': {}
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
