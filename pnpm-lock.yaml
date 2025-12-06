@@ -67,7 +67,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       prettier:
-        specifier: ^3.7.3
+        specifier: ^3.7.4
         version: 3.7.4
       release-please:
         specifier: ^17.1.3
