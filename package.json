@@ -22,7 +22,7 @@
   "engines": {
     "node": ">=22.21.1"
   },
-  "packageManager": "pnpm@10.26.2",
+  "packageManager": "pnpm@10.27.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prebuild": "run-s clean",
