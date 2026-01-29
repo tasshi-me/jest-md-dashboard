@@ -28,8 +28,8 @@ importers:
         specifier: ^30.2.0
         version: 30.2.0
       '@jest/reporters':
-        specifier: ^29.7.0
-        version: 29.7.0
+        specifier: ^30.2.0
+        version: 30.2.0
       '@jest/test-result':
         specifier: ^29.7.0
         version: 29.7.0
@@ -3885,7 +3885,7 @@ snapshots:
 
   '@babel/generator@7.28.5':
     dependencies:
-      '@babel/parser': 7.28.5
+      '@babel/parser': 7.28.6
       '@babel/types': 7.28.6
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
@@ -6953,7 +6953,7 @@ snapshots:
   istanbul-lib-instrument@5.2.1:
     dependencies:
       '@babel/core': 7.28.6
-      '@babel/parser': 7.28.5
+      '@babel/parser': 7.28.6
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.2
       semver: 6.3.1
@@ -6963,7 +6963,7 @@ snapshots:
   istanbul-lib-instrument@6.0.3:
     dependencies:
       '@babel/core': 7.28.6
-      '@babel/parser': 7.28.5
+      '@babel/parser': 7.28.6
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.2
       semver: 7.7.3
@@ -7304,7 +7304,7 @@ snapshots:
 
   jest-message-util@30.2.0:
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.28.6
       '@jest/types': 30.2.0
       '@types/stack-utils': 2.0.3
       chalk: 4.1.2
