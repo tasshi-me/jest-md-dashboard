@@ -39,7 +39,7 @@
     "clean": "rimraf lib"
   },
   "dependencies": {
-    "isomorphic-git": "^1.36.3"
+    "isomorphic-git": "^1.37.0"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
