@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       isomorphic-git:
-        specifier: ^1.37.0
+        specifier: ^1.37.1
         version: 1.37.1
     devDependencies:
       '@babel/core':
