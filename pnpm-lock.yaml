@@ -34,8 +34,8 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0
       '@jest/types':
-        specifier: ^30.2.0
-        version: 30.2.0
+        specifier: ^30.3.0
+        version: 30.3.0
       '@tsconfig/recommended':
         specifier: ^1.0.13
         version: 1.0.13
