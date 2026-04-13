@@ -70,8 +70,8 @@ importers:
         specifier: ^3.8.2
         version: 3.8.2
       release-please:
-        specifier: ^17.5.1
-        version: 17.5.1
+        specifier: ^17.5.2
+        version: 17.6.0
       rimraf:
         specifier: ^6.1.3
         version: 6.1.3
@@ -3288,8 +3288,8 @@ packages:
     resolution: {integrity: sha512-NZQZdC5wOE/H3UT28fVGL+ikOZcEzfMGk/c3iN9UGxzWHMa1op7274oyiUVrAG4B2EuFhus8SvkaYnhvW92p9Q==}
     hasBin: true
 
-  release-please@17.5.1:
-    resolution: {integrity: sha512-ydhEE7EkQmylkxMs8t6WE5ppg5OaNiOu0yvrFvUxQzFyLPh3evKsU9kadABLrKUvsYSeRdGH9NZt4eFdHAGAcQ==}
+  release-please@17.6.0:
+    resolution: {integrity: sha512-ItzkkEBeEbKsCrx7N1QlADrCahoONA4WPlsOinSnXTkqUBIWlHC6+S28VJ9PaHy7ZPSJwSQsRuDjI0/HL5G6hw==}
     engines: {node: '>=20.0.0'}
     hasBin: true
 
@@ -8092,7 +8092,7 @@ snapshots:
     dependencies:
       jsesc: 3.1.0
 
-  release-please@17.5.1:
+  release-please@17.6.0:
     dependencies:
       '@conventional-commits/parser': 0.4.1
       '@google-automations/git-file-utils': 3.0.0
