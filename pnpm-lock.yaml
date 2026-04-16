@@ -70,7 +70,7 @@ importers:
         specifier: ^3.8.2
         version: 3.8.2
       release-please:
-        specifier: ^17.5.2
+        specifier: ^17.6.0
         version: 17.6.0
       rimraf:
         specifier: ^6.1.3
