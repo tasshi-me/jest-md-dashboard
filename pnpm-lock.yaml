@@ -25,7 +25,7 @@ importers:
         specifier: ^22.0.2
         version: 22.0.2(eslint-import-resolver-typescript@4.4.4)(eslint@8.57.1)(prettier@3.8.3)(typescript@5.9.3)
       '@jest/globals':
-        specifier: ^30.4.0
+        specifier: ^30.4.1
         version: 30.4.1
       '@jest/reporters':
         specifier: ^29.7.0
@@ -1085,9 +1085,6 @@ packages:
 
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
-
-  '@sinonjs/fake-timers@15.1.1':
-    resolution: {integrity: sha512-cO5W33JgAPbOh07tvZjUOJ7oWhtaqGHiZw+11DPbyqh2kHTBc3eF/CjJDeQ4205RLQsX6rxCuYOroFQwl7JDRw==}
 
   '@sinonjs/fake-timers@15.4.0':
     resolution: {integrity: sha512-DsG+8/LscQIQg68J6Ef3dv10u6nVyetYn923s3/sus5eaGfTo1of5WMZSLf0UJc9KDuKPilPH0UDJCjvNbDNCA==}
@@ -5001,7 +4998,7 @@ snapshots:
   '@jest/fake-timers@30.3.0':
     dependencies:
       '@jest/types': 30.3.0
-      '@sinonjs/fake-timers': 15.1.1
+      '@sinonjs/fake-timers': 15.4.0
       '@types/node': 24.10.0
       jest-message-util: 30.3.0
       jest-mock: 30.3.0
@@ -5390,10 +5387,6 @@ snapshots:
       type-detect: 4.0.8
 
   '@sinonjs/fake-timers@10.3.0':
-    dependencies:
-      '@sinonjs/commons': 3.0.1
-
-  '@sinonjs/fake-timers@15.1.1':
     dependencies:
       '@sinonjs/commons': 3.0.1
 
