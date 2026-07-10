@@ -70,8 +70,8 @@ importers:
         specifier: ^3.9.4
         version: 3.9.4
       release-please:
-        specifier: ^17.10.1
-        version: 17.10.1
+        specifier: ^17.10.2
+        version: 17.10.3
       rimraf:
         specifier: ^6.1.3
         version: 6.1.3
@@ -2776,6 +2776,10 @@ packages:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
 
+  js-yaml@4.3.0:
+    resolution: {integrity: sha512-1td788aAnnZ5qs7V2QIRl1owjtYpbKt749Y3xauqQgwIIGF/xXWz1wMTEBx5O3LK3lXLVuqXPdPxj2BoFHaW9Q==}
+    hasBin: true
+
   jsep@1.4.0:
     resolution: {integrity: sha512-B7qPcEVE3NVkmSJbaYxvv4cHkVW7DQsZz13pUMrfS8z8Q/BuShN+gcTXrUlPiGqM2/t/EEaI030bpxMqY8gMlw==}
     engines: {node: '>= 10.16.0'}
@@ -3296,8 +3300,8 @@ packages:
     resolution: {integrity: sha512-NZQZdC5wOE/H3UT28fVGL+ikOZcEzfMGk/c3iN9UGxzWHMa1op7274oyiUVrAG4B2EuFhus8SvkaYnhvW92p9Q==}
     hasBin: true
 
-  release-please@17.10.1:
-    resolution: {integrity: sha512-Wn7NnkgLmBDNubMqsBxfMBVvj11qI2g/9IWvacPcfnizpoOxQOtF+Ooaur2GXzYrjRj4QyInd3xfArRa+20aGw==}
+  release-please@17.10.3:
+    resolution: {integrity: sha512-uJJYlJFnzV3poxw1eTpv2+dNM0Im2tdfU/FoM/Brfyjz+Xo7TUcNKAaF1mKWCgQ/OJx9tSokimG1BB78XjWJxA==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
@@ -7581,6 +7585,10 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
+  js-yaml@4.3.0:
+    dependencies:
+      argparse: 2.0.1
+
   jsep@1.4.0: {}
 
   jsesc@3.1.0: {}
@@ -8092,7 +8100,7 @@ snapshots:
     dependencies:
       jsesc: 3.1.0
 
-  release-please@17.10.1:
+  release-please@17.10.3:
     dependencies:
       '@conventional-commits/parser': 0.4.1
       '@google-automations/git-file-utils': 3.0.0
@@ -8113,7 +8121,7 @@ snapshots:
       figures: 3.2.0
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
-      js-yaml: 4.1.0
+      js-yaml: 4.3.0
       jsonpath-plus: 10.3.0
       node-html-parser: 6.1.13
       parse-github-repo-url: 1.4.1
