@@ -63,6 +63,6 @@
     "prettier": "^3.9.5",
     "release-please": "^17.10.3",
     "rimraf": "^6.1.3",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   }
 }
