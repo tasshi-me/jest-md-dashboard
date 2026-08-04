@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.8.2](https://github.com/tasshi-me/jest-md-dashboard/compare/jest-md-dashboard-v0.8.1...jest-md-dashboard-v0.8.2) (2026-08-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency isomorphic-git to ^1.38.10 ([#975](https://github.com/tasshi-me/jest-md-dashboard/issues/975)) ([b47178a](https://github.com/tasshi-me/jest-md-dashboard/commit/b47178abc2aa42f6f80150da45342dec09682124))
+* **deps:** update dependency isomorphic-git to ^1.38.7 ([#965](https://github.com/tasshi-me/jest-md-dashboard/issues/965)) ([e90a153](https://github.com/tasshi-me/jest-md-dashboard/commit/e90a153dc8afe440493fab1f064101059a06f435))
+* **deps:** update dependency isomorphic-git to ^1.38.9 ([#971](https://github.com/tasshi-me/jest-md-dashboard/issues/971)) ([3bf7dd8](https://github.com/tasshi-me/jest-md-dashboard/commit/3bf7dd8ca0f0fcea8c32ee29f56ae81d1b07af5f))
+* **deps:** update dependency isomorphic-git to ^1.39.0 ([#976](https://github.com/tasshi-me/jest-md-dashboard/issues/976)) ([fac163b](https://github.com/tasshi-me/jest-md-dashboard/commit/fac163b53a243ccd2263b064dcc73573d91cd172))
+* **deps:** update dependency isomorphic-git to ^1.40.0 ([#977](https://github.com/tasshi-me/jest-md-dashboard/issues/977)) ([62fb484](https://github.com/tasshi-me/jest-md-dashboard/commit/62fb484424d3d94bf1a8f8387a7fe128eda1b1fd))
+
 ## [0.8.1](https://github.com/tasshi-me/jest-md-dashboard/compare/jest-md-dashboard-v0.8.0...jest-md-dashboard-v0.8.1) (2025-11-08)
 
 
