@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       isomorphic-git:
-        specifier: ^1.41.4
-        version: 1.41.4
+        specifier: ^1.41.5
+        version: 1.41.7
     devDependencies:
       '@babel/core':
         specifier: ^7.29.7
@@ -2487,8 +2487,8 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
-  isomorphic-git@1.41.4:
-    resolution: {integrity: sha512-XfZteQRhteAdzOlKcWAeC+Zkx0ZtAh0yIO0EyURAO+mDcIBg5kzKg4UtnYE7GcmKB6qFZc0zMCXdgod/cQXVXw==}
+  isomorphic-git@1.41.7:
+    resolution: {integrity: sha512-ZCyMNg0eLUmuhGXdVQFi56fM93kwIqqlUSVnWbgzf1oDYidrQbWfrf+hEvn2E8xyo191zRPQyDCIlwg6YJ6isQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -6890,7 +6890,7 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  isomorphic-git@1.41.4:
+  isomorphic-git@1.41.7:
     dependencies:
       async-lock: 1.4.1
       clean-git-ref: 2.0.1
